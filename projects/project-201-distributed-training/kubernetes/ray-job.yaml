@@ -1,0 +1,13 @@
+# Kubernetes manifest for ray-job
+# TODO: Implement complete Kubernetes configuration
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ray-job
+  namespace: ray
+data:
+  # TODO: Add configuration data
+  key: value
+---
+# TODO: Add additional resources (Deployment, Service, etc.)

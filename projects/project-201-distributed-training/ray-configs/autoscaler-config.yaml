@@ -1,0 +1,33 @@
+# Ray Autoscaler Configuration
+autoscaling:
+  enabled: true
+  min_workers: 2
+  max_workers: 8
+  target_utilization_fraction: 0.8
+  idle_timeout_minutes: 5
+  upscaling_speed: 1.0
+  downscaling_speed: 1.0
+
+# Node type specific scaling
+node_types:
+  ray.worker.gpu:
+    min_workers: 2
+    max_workers: 8
+    resources:
+      CPU: 16
+      GPU: 4
+      memory: 64000000000
+    
+    # Scaling triggers
+    scaling_config:
+      # Scale up when GPU utilization > 80%
+      scale_up_threshold:
+        gpu_utilization: 0.80
+        cpu_utilization: 0.75
+      
+      # Scale down when idle for 5 minutes
+      scale_down_threshold:
+        idle_time_minutes: 5
+        gpu_utilization: 0.30
+
+head_node_type: ray.head.default

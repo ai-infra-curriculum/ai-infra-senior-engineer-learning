@@ -1,0 +1,11 @@
+# Example TrainingJob
+apiVersion: ml.example.com/v1
+kind: TrainingJob
+metadata:
+  name: example-training
+spec:
+  model: resnet50
+  dataset: imagenet
+  numWorkers: 2
+  gpusPerWorker: 1
+  # TODO: Add more configuration

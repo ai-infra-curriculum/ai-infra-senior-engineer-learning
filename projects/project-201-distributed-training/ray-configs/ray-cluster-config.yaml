@@ -1,0 +1,66 @@
+# Ray Cluster Configuration for Distributed Training
+cluster_name: distributed-training-cluster
+
+max_workers: 8  # Maximum number of worker nodes
+upscaling_speed: 1.0
+idle_timeout_minutes: 5
+
+provider:
+  type: kubernetes
+  namespace: ray
+  use_internal_ips: true
+
+available_node_types:
+  ray.head.default:
+    resources:
+      CPU: 8
+      memory: 32000000000
+    node_config:
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        labels:
+          component: ray-head
+      spec:
+        containers:
+          - name: ray-node
+            image: rayproject/ray:2.9.0-py310-gpu
+            resources:
+              requests:
+                cpu: 8
+                memory: 32Gi
+              limits:
+                cpu: 8
+                memory: 32Gi
+
+  ray.worker.gpu:
+    min_workers: 2
+    max_workers: 8
+    resources:
+      CPU: 16
+      memory: 64000000000
+      GPU: 4
+    node_config:
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        labels:
+          component: ray-worker
+      spec:
+        nodeSelector:
+          nvidia.com/gpu: "true"
+        containers:
+          - name: ray-node
+            image: rayproject/ray:2.9.0-py310-gpu
+            resources:
+              requests:
+                cpu: 16
+                memory: 64Gi
+                nvidia.com/gpu: 4
+              limits:
+                cpu: 16
+                memory: 64Gi
+                nvidia.com/gpu: 4
+            env:
+              - name: RAY_BACKEND_LOG_LEVEL
+                value: debug

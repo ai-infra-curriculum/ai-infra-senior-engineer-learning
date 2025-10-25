@@ -1,0 +1,29 @@
+# Cloud SDKs
+boto3>=1.28.0  # AWS
+google-cloud-storage>=2.10.0  # GCP
+azure-storage-blob>=12.17.0  # Azure
+
+# Infrastructure
+kubernetes>=27.2.0
+terraform-provider-aws>=5.0.0
+
+# Replication and Sync
+rsync>=1.2.0
+rclone>=1.63.0
+
+# Monitoring
+prometheus-client>=0.17.0
+grafana-api>=1.0.3
+
+# Cost Management
+cloud-custodian>=0.9.0
+
+# Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+click>=8.1.0
+rich>=13.4.0
+
+# Testing
+pytest>=7.3.0
+pytest-asyncio>=0.21.0

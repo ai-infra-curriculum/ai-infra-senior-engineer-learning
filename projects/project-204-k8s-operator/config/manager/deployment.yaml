@@ -1,0 +1,22 @@
+# Operator deployment
+# TODO: Complete deployment configuration
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: training-operator
+  namespace: ml-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: training-operator
+  template:
+    metadata:
+      labels:
+        app: training-operator
+    spec:
+      containers:
+        - name: operator
+          image: training-operator:latest
+          # TODO: Add configuration

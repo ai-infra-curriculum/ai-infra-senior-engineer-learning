@@ -1,0 +1,9 @@
+# Kubernetes manifest for deployment-llm
+# TODO: Implement complete configuration
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: model-serving-config
+data:
+  # TODO: Add configuration

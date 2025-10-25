@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  model-serving:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - JAEGER_AGENT_HOST=jaeger
+    volumes:
+      - ./models:/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "16686:16686"
+      - "6831:6831/udp"
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus-config.yaml:/etc/prometheus/prometheus.yml

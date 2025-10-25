@@ -1,0 +1,40 @@
+# Custom Metrics ServiceMonitor for Kubernetes
+# TODO for students: Add custom business metrics, SLI/SLO definitions
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: model-serving-metrics
+  labels:
+    app: model-serving
+spec:
+  selector:
+    matchLabels:
+      app: model-serving
+  endpoints:
+    - port: metrics
+      interval: 30s
+      path: /metrics
+---
+# Custom Prometheus Rules
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: model-serving-alerts
+spec:
+  groups:
+    - name: model-serving
+      interval: 30s
+      rules:
+        - alert: HighLatency
+          expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "High request latency detected"
+        - alert: HighErrorRate
+          expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05
+          for: 2m
+          labels:
+            severity: critical

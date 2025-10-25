@@ -1,0 +1,197 @@
+# Benchmark Configuration for Distributed Training Scaling Tests
+#
+# This configuration defines benchmark scenarios for testing distributed
+# training scaling efficiency across different numbers of nodes and GPUs.
+
+# Benchmark scenarios to run
+scenarios:
+  - name: "weak-scaling-resnet50"
+    description: "Weak scaling test - increase data and resources proportionally"
+    model: "resnet50"
+    dataset: "imagenet-subset"
+    scaling_type: "weak"
+    test_configurations:
+      - workers: 1
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 10000
+      - workers: 2
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 20000
+      - workers: 4
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 40000
+      - workers: 8
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 80000
+
+  - name: "strong-scaling-resnet50"
+    description: "Strong scaling test - fixed problem size, more resources"
+    model: "resnet50"
+    dataset: "imagenet-subset"
+    scaling_type: "strong"
+    test_configurations:
+      - workers: 1
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 50000
+      - workers: 2
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 50000
+      - workers: 4
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 50000
+      - workers: 8
+        gpus_per_worker: 1
+        batch_size_per_gpu: 128
+        total_samples: 50000
+
+  - name: "multi-gpu-per-node"
+    description: "Test scaling with multiple GPUs per worker node"
+    model: "resnet101"
+    dataset: "imagenet-subset"
+    scaling_type: "strong"
+    test_configurations:
+      - workers: 2
+        gpus_per_worker: 1
+        batch_size_per_gpu: 64
+        total_samples: 50000
+      - workers: 2
+        gpus_per_worker: 2
+        batch_size_per_gpu: 64
+        total_samples: 50000
+      - workers: 2
+        gpus_per_worker: 4
+        batch_size_per_gpu: 64
+        total_samples: 50000
+
+  - name: "communication-overhead"
+    description: "Measure NCCL communication overhead"
+    model: "resnet50"
+    dataset: "synthetic"  # Use synthetic data to isolate communication
+    scaling_type: "strong"
+    test_configurations:
+      - workers: 1
+        gpus_per_worker: 1
+        batch_size_per_gpu: 256
+        total_samples: 10000
+        enable_profiling: true
+      - workers: 4
+        gpus_per_worker: 1
+        batch_size_per_gpu: 256
+        total_samples: 10000
+        enable_profiling: true
+      - workers: 8
+        gpus_per_worker: 1
+        batch_size_per_gpu: 256
+        total_samples: 10000
+        enable_profiling: true
+
+# Training parameters (consistent across benchmarks)
+training:
+  epochs: 5  # Short epochs for benchmark
+  optimizer: "sgd"
+  learning_rate: 0.1
+  momentum: 0.9
+  weight_decay: 0.0001
+  warmup_epochs: 1
+
+# Data loading configuration
+data_loading:
+  num_workers_per_gpu: 4
+  prefetch_factor: 2
+  pin_memory: true
+  persistent_workers: true
+
+# NCCL configuration for GPU communication
+nccl:
+  backend: "nccl"
+  init_method: "env://"
+  timeout_minutes: 30
+
+# Ray Train configuration
+ray_train:
+  use_gpu: true
+  resources_per_worker:
+    CPU: 8
+    memory_gb: 32
+  placement_strategy: "PACK"  # or "SPREAD"
+
+# Checkpoint configuration (minimal for benchmarks)
+checkpointing:
+  enabled: false  # Disable to focus on training performance
+  frequency: 1000000  # Very high value to effectively disable
+
+# Metrics to collect
+metrics:
+  training:
+    - "throughput_samples_per_second"
+    - "throughput_images_per_second"
+    - "epoch_time_seconds"
+    - "step_time_milliseconds"
+    - "loss"
+    - "accuracy"
+
+  system:
+    - "gpu_utilization_percent"
+    - "gpu_memory_used_mb"
+    - "gpu_memory_total_mb"
+    - "gpu_power_watts"
+    - "cpu_utilization_percent"
+    - "network_bandwidth_mbps"
+
+  communication:
+    - "nccl_time_milliseconds"
+    - "allreduce_time_milliseconds"
+    - "gradient_communication_overhead_percent"
+
+# Analysis parameters
+analysis:
+  baseline_workers: 1  # Configuration to use as baseline for scaling efficiency
+  target_scaling_efficiency: 0.80  # 80% is considered good
+
+  # Metrics for scaling efficiency calculation
+  efficiency_metrics:
+    - "throughput_samples_per_second"
+    - "epoch_time_seconds"
+
+  # Generate these visualizations
+  plots:
+    - type: "scaling_efficiency"
+      title: "Distributed Training Scaling Efficiency"
+      metrics: ["throughput_samples_per_second"]
+
+    - type: "gpu_utilization"
+      title: "GPU Utilization by Worker Count"
+      metrics: ["gpu_utilization_percent"]
+
+    - type: "communication_overhead"
+      title: "NCCL Communication Overhead"
+      metrics: ["gradient_communication_overhead_percent"]
+
+    - type: "speedup"
+      title: "Training Speedup vs Baseline"
+      metrics: ["epoch_time_seconds"]
+
+# Output configuration
+output:
+  results_dir: "./benchmark_results"
+  log_level: "INFO"
+  save_raw_metrics: true
+  save_plots: true
+  format: "json"  # Also supports "csv", "parquet"
+
+# Reproducibility
+seed: 42
+deterministic: true  # Use deterministic algorithms where possible
+
+# Resource limits and timeouts
+limits:
+  max_runtime_minutes: 120  # 2 hours per benchmark scenario
+  max_retries: 2
+  node_failure_tolerance: 1

@@ -1,0 +1,80 @@
+# Prometheus Alert Rules for Distributed Training
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-alerts
+  namespace: ray
+data:
+  alert_rules.yml: |
+    groups:
+      - name: ray_cluster_alerts
+        interval: 30s
+        rules:
+          - alert: RayHeadDown
+            expr: up{job="ray-head"} == 0
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Ray head node is down"
+              description: "Ray cluster head node has been down for more than 2 minutes"
+
+          - alert: RayWorkerDown
+            expr: count(up{job="ray-workers"} == 0) > 0
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Ray worker nodes down"
+              description: "{{ $value }} Ray worker nodes are currently down"
+
+      - name: gpu_alerts
+        interval: 30s
+        rules:
+          - alert: HighGPUTemperature
+            expr: DCGM_FI_DEV_GPU_TEMP > 85
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "High GPU temperature detected"
+              description: "GPU {{ $labels.gpu }} on node {{ $labels.node }} is running at {{ $value }}°C"
+
+          - alert: LowGPUUtilization
+            expr: avg(DCGM_FI_DEV_GPU_UTIL) < 50
+            for: 10m
+            labels:
+              severity: info
+            annotations:
+              summary: "Low GPU utilization"
+              description: "Average GPU utilization is {{ $value }}% (target: >85%)"
+
+          - alert: GPUMemoryFull
+            expr: (DCGM_FI_DEV_FB_USED / DCGM_FI_DEV_FB_FREE) > 0.95
+            for: 2m
+            labels:
+              severity: warning
+            annotations:
+              summary: "GPU memory nearly full"
+              description: "GPU {{ $labels.gpu }} memory usage > 95%"
+
+      - name: training_job_alerts
+        interval: 30s
+        rules:
+          - alert: TrainingJobStalled
+            expr: rate(training_steps_completed[5m]) == 0
+            for: 10m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Training job appears stalled"
+              description: "No progress in last 10 minutes for job {{ $labels.job_name }}"
+
+          - alert: HighCommunicationOverhead
+            expr: nccl_communication_time_ratio > 0.20
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "High NCCL communication overhead"
+              description: "Communication overhead is {{ $value | humanizePercentage }} (target: <15%)"

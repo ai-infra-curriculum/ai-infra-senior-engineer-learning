@@ -1,0 +1,9 @@
+name: Performance Tests
+on: [push]
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run benchmarks
+        run: python benchmarks/benchmark_tensorrt.py
