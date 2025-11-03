@@ -1,5 +1,18 @@
 # Lecture 07: GPU Monitoring and Management with DCGM
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design comprehensive GPU monitoring infrastructure using NVIDIA DCGM integrated with Prometheus, Grafana, and alerting systems for production ML platforms
+- Implement health check and diagnostic workflows using DCGM to proactively detect GPU hardware issues including ECC errors, thermal problems, and XID errors before they cause failures
+- Configure multi-tier alerting strategies (critical, warning, info) for GPU metrics including utilization, temperature, power, memory errors, and throttling events
+- Architect capacity planning systems that track GPU utilization patterns, forecast resource needs, and trigger scaling decisions based on historical metrics and trends
+- Integrate GPU metrics with application-level metrics (training loss, throughput, latency) to provide end-to-end observability for ML workflows
+- Design cost allocation and chargeback systems that track GPU usage by team, project, or workload using DCGM metrics and Prometheus queries
+- Implement automated remediation workflows that respond to GPU health issues including node drain, workload migration, and alert escalation based on DCGM policy violations
+- Troubleshoot GPU infrastructure issues using DCGM diagnostics, profiling metrics, and correlation with system logs to identify root causes of performance degradation and failures
+
 ## Table of Contents
 1. [Introduction to GPU Monitoring](#introduction-to-gpu-monitoring)
 2. [NVIDIA DCGM Overview](#nvidia-dcgm-overview)

@@ -1,5 +1,18 @@
 # Lecture 4: Decision Making and Architecture
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Evaluate technical decisions matching analysis depth to impact and reversibility using type 1 vs type 2 decision frameworks
+- Apply structured decision frameworks using DECIDE process establishing criteria considering alternatives identifying best options implementing monitoring outcomes
+- Write comprehensive Architecture Decision Records capturing context rationale consequences alternatives providing future teams with decision understanding preventing relitigating
+- Execute trade-off analysis making explicit evaluations across performance cost complexity maintainability visualizing options scoring systematically against weighted criteria
+- Apply ML infrastructure decision patterns choosing training frameworks model serving architectures data storage matching requirements to proven approaches
+- Decide refactor vs rebuild analyzing technical debt test coverage team understanding using strangler fig pattern for safe migrations
+- Build stakeholder consensus using RACI matrix understanding motivations socializing early incorporating feedback navigating disagreement building broad support
+- Avoid decision pitfalls preventing analysis paralysis resume-driven development sunk cost fallacy setting deadlines using 70% rule focusing on problem-fit
+
 ## Table of Contents
 1. [The Art of Technical Decision Making](#the-art-of-technical-decision-making)
 2. [Decision-Making Frameworks](#decision-making-frameworks)

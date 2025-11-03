@@ -1,5 +1,18 @@
 # Lecture 01: Kubernetes Operators and Custom Resource Definitions
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and implement production-grade Kubernetes operators using the controller-runtime framework
+- Create Custom Resource Definitions (CRDs) that extend the Kubernetes API for ML-specific workloads
+- Build reconciliation loops that handle complex distributed training and inference scenarios
+- Implement proper status reporting, conditions, and observability for operator-managed resources
+- Apply best practices for operator development including idempotency, finalizers, and error handling
+- Integrate ML-specific operators (KubeFlow, Ray) into existing platform architectures
+- Evaluate trade-offs between building custom operators versus leveraging existing frameworks
+- Design operators that achieve Level 3-4 maturity (full lifecycle management and deep insights)
+
 ## Table of Contents
 1. [Introduction to the Operator Pattern](#introduction)
 2. [Understanding Custom Resource Definitions](#crds)

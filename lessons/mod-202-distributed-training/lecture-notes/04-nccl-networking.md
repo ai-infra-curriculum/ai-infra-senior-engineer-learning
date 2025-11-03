@@ -1,5 +1,18 @@
 # Lecture 04: NCCL and High-Performance Networking
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Architect distributed training systems leveraging NCCL's optimized collective communication primitives for multi-GPU and multi-node training
+- Implement and configure NCCL collective operations (AllReduce, Broadcast, ReduceScatter, AllGather) for efficient gradient synchronization
+- Design and optimize network topology configurations using NVLink, InfiniBand, and RDMA to minimize communication bottlenecks
+- Configure NCCL environment variables and tuning parameters to maximize bandwidth utilization and reduce latency for specific workloads
+- Evaluate and benchmark network performance using NCCL tests to identify bottlenecks and measure scaling efficiency
+- Implement GPUDirect RDMA and InfiniBand optimizations for multi-node training with minimal CPU involvement
+- Troubleshoot common NCCL issues including P2P access failures, InfiniBand configuration errors, and communication timeouts
+- Design network-aware training architectures that balance compute, communication, and bandwidth constraints for production ML systems
+
 ## Table of Contents
 
 1. [Introduction to NCCL](#introduction)

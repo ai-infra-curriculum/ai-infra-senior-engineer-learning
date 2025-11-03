@@ -1,5 +1,18 @@
 # Lecture 5: Technical Communication
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Apply communication as force multiplier understanding impact equals technical skill multiplied by communication skill building influence reputation resources
+- Tailor messages to audiences adapting depth language focus for engineers managers executives ML scientists cross-functional teams using abstraction ladder
+- Write effectively using inverted pyramid structure starting with TL;DR providing progressive disclosure implementing documentation best practices showing examples
+- Create visual communication designing architecture diagrams using C4 model levels choosing appropriate chart types building effective dashboards visualizing data
+- Deliver technical presentations structuring talks appropriately for duration designing clear slides practicing delivery handling Q&A sharing content post-presentation
+- Choose communication modes distinguishing async vs sync using email Slack meetings appropriately applying meeting best practices documenting decisions effectively
+- Translate ML concepts explaining training inference distributed systems GPU utilization model drift in business terms using analogies for non-technical audiences
+- Avoid communication anti-patterns preventing curse of knowledge information dumping jargon overload simplifying without dumbing down respecting audience intelligence
+
 ## Table of Contents
 1. [Why Communication Is Your Superpower](#why-communication-is-your-superpower)
 2. [Know Your Audience](#know-your-audience)

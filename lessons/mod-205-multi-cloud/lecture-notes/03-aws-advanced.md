@@ -1,5 +1,18 @@
 # Lecture 03: AWS Advanced Services for ML Infrastructure
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design production ML systems on AWS leveraging SageMaker for managed training/inference, EKS for containerized workloads, and Bedrock for generative AI applications
+- Architect SageMaker pipelines integrating data processing, model training with distributed strategies, hyperparameter optimization, and multi-model endpoints for production serving
+- Configure Amazon EKS clusters for ML workloads with GPU node groups, Karpenter autoscaling, EFA networking, and FSx for Lustre storage for high-performance training
+- Implement AWS Bedrock architectures for LLM applications using foundation models, RAG patterns with vector databases, and fine-tuning with custom datasets
+- Design cost-optimized AWS ML infrastructure using Spot instances for training, Savings Plans for inference, S3 Intelligent-Tiering for data, and rightsizing recommendations
+- Configure AWS networking for ML including VPC design, PrivateLink for secure SageMaker access, Direct Connect for hybrid workloads, and multi-region architectures
+- Implement AWS-specific optimizations leveraging Trainium/Inferentia accelerators, EBS io2 Block Express volumes, and AWS-optimized ML AMIs for maximum performance
+- Build production-grade ML systems on AWS integrating IAM policies, CloudWatch monitoring, EventBridge automation, and compliance (HIPAA, PCI-DSS) requirements
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Amazon SageMaker Deep Dive](#sagemaker)

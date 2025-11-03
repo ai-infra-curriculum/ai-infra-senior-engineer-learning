@@ -1,16 +1,21 @@
 # Lecture 7: Multi-Cloud Cost Optimization
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design cost-optimized multi-cloud architectures analyzing pricing models across AWS, GCP, and Azure including compute (reserved/spot/preemptible), storage tiers, and egress costs
+- Implement unified cost monitoring and allocation using cloud cost management tools (AWS Cost Explorer, GCP Cost Management, Azure Cost Management) and third-party platforms
+- Architect workload placement strategies optimizing for cost by evaluating compute pricing, data transfer costs, and regional pricing differences to select optimal cloud/region combinations
+- Apply automated cost optimization techniques including rightsizing recommendations, automated shutdown schedules, spot instance bidding strategies, and commitment-based discounts
+- Implement FinOps practices for ML workloads establishing cost allocation tags, showback/chargeback models, budget alerts, and team accountability for cloud spending
+- Design cost-aware ML training strategies using spot/preemptible instances, checkpointing for interruption recovery, and multi-cloud failover to minimize training costs
+- Optimize storage costs across clouds implementing lifecycle policies, compression, deduplication, and tiered storage (hot/cool/archive) based on access patterns
+- Build cost governance frameworks with spending limits, approval workflows, policy enforcement, and regular cost reviews achieving 20-40% cost reduction through optimization
+
 ## Overview
 
 Cost optimization in multi-cloud environments presents unique challenges and opportunities. This lecture covers comprehensive strategies for managing, monitoring, and optimizing costs across multiple cloud providers while maintaining performance and reliability.
-
-## Learning Objectives
-
-- Understand cost models across AWS, GCP, and Azure
-- Master cost monitoring and allocation strategies
-- Implement automated cost optimization techniques
-- Design cost-aware architectures
-- Develop FinOps practices for ML workloads
 
 ---
 

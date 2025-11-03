@@ -1,5 +1,18 @@
 # Lecture 6: Privacy-Preserving ML
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design differential privacy implementations adding calibrated noise to ML training protecting individual privacy while maintaining model utility
+- Implement federated learning architectures training models across decentralized data sources without centralized data aggregation preserving data locality
+- Architect homomorphic encryption solutions enabling computation on encrypted data for privacy-sensitive ML inference without decryption
+- Configure secure multi-party computation (MPC) for collaborative ML training multiple parties computing jointly without revealing private inputs
+- Design synthetic data generation using GANs or statistical methods creating privacy-preserving datasets for development and testing
+- Implement privacy budgeting and tracking with (ε, δ)-differential privacy calculating cumulative privacy loss and enforcing privacy bounds
+- Build privacy-preserving inference systems with secure enclaves (SGX), trusted execution environments, or encrypted predictions
+- Architect privacy compliance workflows with consent management, privacy impact assessments, data minimization, and privacy-by-design principles
+
 ## Table of Contents
 1. [Introduction to Privacy-Preserving ML](#introduction)
 2. [Differential Privacy](#differential-privacy)

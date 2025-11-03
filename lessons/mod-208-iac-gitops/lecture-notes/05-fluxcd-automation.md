@@ -1,5 +1,18 @@
 # Lecture 5: FluxCD Automation
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design FluxCD architectures using GitOps Toolkit components (Source Controller, Kustomize Controller, Helm Controller, Notification Controller) for composable CD workflows
+- Implement Flux bootstrap process installing Flux into cluster via Git repository enabling self-managed GitOps infrastructure with automatic upgrades
+- Configure Flux Kustomizations for multi-environment deployments using overlays, patches, and variable substitution managing configuration across dev/staging/prod
+- Architect image automation with Flux Image Reflector and Image Automation Controllers automatically updating manifests when new container images are pushed
+- Design ML pipeline automation using Flux managing Kubeflow Pipelines, Argo Workflows, or custom training jobs with GitOps-driven deployment
+- Implement Flux multi-tenancy using Git repository per team, namespace isolation, and RBAC controls enabling safe self-service deployments
+- Configure Flux notifications with Slack, Teams, or webhooks alerting on sync failures, reconciliation errors, and successful deployments
+- Build advanced Flux workflows with dependencies, health checks, automated rollbacks, and progressive delivery integrating with Flagger for canary deployments
+
 ## Table of Contents
 1. [FluxCD Architecture](#fluxcd-architecture)
 2. [GitOps Toolkit Components](#gitops-toolkit-components)

@@ -1,14 +1,21 @@
 # Advanced Azure for AI Infrastructure
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design production ML systems on Azure leveraging Azure Machine Learning for managed training/inference, AKS for Kubernetes workloads, and Azure OpenAI Service for LLM applications
+- Architect Azure ML pipelines integrating data processing with Azure Data Factory, distributed training with custom compute clusters, AutoML capabilities, and managed online endpoints
+- Configure Azure Kubernetes Service (AKS) for ML workloads with GPU node pools, virtual kubelet for burst capacity, Azure Files/NetApp for storage, and Azure CNI networking
+- Implement Azure OpenAI Service architectures for enterprise LLM applications using GPT-4, embeddings, content filtering, and private endpoint connectivity
+- Design cost-optimized Azure ML infrastructure using Spot VMs for training, reserved capacity for inference, cool/archive storage tiers, and Azure Hybrid Benefit licensing
+- Configure Azure networking for ML including VNet design, Private Link for secure service access, ExpressRoute for hybrid connectivity, and availability zones for HA
+- Implement Azure-specific optimizations leveraging NDv4/NCads A100 v4 series VMs, Ultra Disk storage, and Azure ML managed compute for automatic scaling
+- Build production-grade ML systems on Azure integrating Azure AD authentication, Azure Monitor, Logic Apps for automation, and compliance frameworks (Azure Policy, Blueprints)
+
 ## Overview
 
 Microsoft Azure provides powerful services for AI infrastructure, including Azure Machine Learning, GPU-enabled VMs, and strong enterprise integration capabilities. This lesson covers advanced Azure services and patterns for AI workloads.
-
-**Learning Objectives:**
-- Master Azure ML service and compute resources
-- Understand Azure's GPU offerings and optimization
-- Implement Azure-specific AI infrastructure patterns
-- Integrate Azure services with multi-cloud architectures
 
 ---
 

@@ -1,5 +1,18 @@
 # Lecture 3: GitOps Principles
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design GitOps workflows where Git serves as single source of truth for infrastructure and application configuration with automated reconciliation ensuring actual state matches desired state
+- Implement declarative infrastructure using Kubernetes manifests, Helm charts, or Kustomize overlays stored in Git enabling version control, rollback, and audit trails
+- Architect pull-based deployment models where agents (ArgoCD, Flux) continuously sync cluster state from Git eliminating need for external access to cluster credentials
+- Configure automated reconciliation loops detecting configuration drift and self-healing by reapplying desired state from Git maintaining system consistency
+- Design Git branching strategies for GitOps including environment promotion (dev→staging→prod), pull request workflows, and automated testing before merge
+- Implement GitOps for ML infrastructure managing model deployments, training pipelines, feature stores, and supporting infrastructure through Git-based workflows
+- Build GitOps security models with signed commits, branch protection, RBAC integration, and secret management (External Secrets Operator) ensuring secure operations
+- Architect disaster recovery using GitOps enabling complete cluster recreation from Git repository providing infrastructure-as-code backup and recovery capabilities
+
 ## Table of Contents
 1. [What is GitOps?](#what-is-gitops)
 2. [Core Principles](#core-principles)

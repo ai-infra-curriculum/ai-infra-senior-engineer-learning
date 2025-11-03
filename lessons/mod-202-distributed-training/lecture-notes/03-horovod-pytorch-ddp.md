@@ -1,5 +1,18 @@
 # Lecture 03: Horovod and PyTorch DDP
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Implement distributed training using Horovod with MPI-based communication for HPC environments
+- Configure PyTorch DistributedDataParallel (DDP) for multi-GPU and multi-node training
+- Deploy PyTorch Fully Sharded Data Parallel (FSDP) for training large models exceeding single-GPU memory
+- Implement TensorFlow distributed strategies including MirroredStrategy and MultiWorkerMirroredStrategy
+- Compare performance characteristics of Horovod, PyTorch DDP, and Ray Train for different workloads
+- Optimize gradient synchronization and communication patterns for distributed training efficiency
+- Implement production deployment patterns for distributed training on Kubernetes and SLURM clusters
+- Troubleshoot common distributed training issues including OOM errors, stragglers, and synchronization failures
+
 ## Table of Contents
 
 1. [Introduction](#introduction)

@@ -1,5 +1,18 @@
 # Lecture 08: Production Kubernetes for ML
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and implement highly available Kubernetes architectures with multi-AZ control planes for ML platforms
+- Develop and test disaster recovery procedures including backup, restore, and failover strategies
+- Implement comprehensive monitoring and observability using Prometheus, Grafana, and distributed tracing
+- Conduct performance tuning for ML workloads including etcd optimization, API server scaling, and network tuning
+- Design and execute incident response procedures specific to ML platform failures
+- Perform capacity planning for growing ML workloads including GPU resource forecasting
+- Conduct production readiness reviews using industry-standard checklists and best practices
+- Evaluate and implement SLIs, SLOs, and error budgets for ML infrastructure services
+
 ## Table of Contents
 1. [Production Readiness](#production-readiness)
 2. [High Availability Design](#ha-design)

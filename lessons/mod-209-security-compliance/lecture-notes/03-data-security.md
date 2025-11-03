@@ -1,5 +1,18 @@
 # Lecture 3: Data Security and Encryption for ML Systems
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design data encryption strategies with encryption at rest (AES-256), encryption in transit (TLS 1.3), and key management (KMS/HSM) for ML datasets and models
+- Implement data access controls using IAM policies, attribute-based access control (ABAC), and column-level security ensuring least-privilege data access
+- Architect data classification systems categorizing data sensitivity (public, internal, confidential, restricted) with appropriate handling requirements
+- Configure PII/PHI detection and handling using automated scanning, anonymization, pseudonymization, and data masking for privacy protection
+- Design data lifecycle security managing data retention, secure deletion, backup encryption, and disaster recovery with security controls
+- Implement data provenance and lineage tracking creating audit trails for data access, transformations, and usage for compliance and debugging
+- Build secure data pipelines with input validation, sanitization, secure data transfer protocols, and monitoring for data exfiltration attempts
+- Architect compliance controls for data regulations (GDPR, HIPAA, CCPA) with data residency, right-to-erasure, and consent management
+
 ## Table of Contents
 1. [Introduction to Data Security](#introduction-to-data-security)
 2. [Data Classification and Lifecycle](#data-classification-and-lifecycle)

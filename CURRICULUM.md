@@ -1281,3 +1281,20 @@ For corporate training: Contact us for bulk licensing
 ---
 
 **Remember**: Becoming a senior engineer is a journey, not a destination. This curriculum provides the technical foundation, but senior-level impact comes from applying these skills to solve real-world problems, mentoring others, and continuous learning. Good luck!
+
+---
+
+## Requirement-to-Module Mapping
+
+| Job Requirement | Curriculum Coverage |
+| --- | --- |
+| Lead design and implementation of scalable AI/ML infrastructure solutions | Module 201 - Advanced Kubernetes<br>Module 205 - Multi-Cloud Architecture<br>Project 203 - Multi-Region Deployment |
+| Architect and deploy GPU-based systems and NVIDIA DGX servers in high-availability environments | Module 203 - GPU Computing<br>Module 205 - Multi-Cloud Architecture<br>Project 202 - Enterprise Model Serving |
+| Optimize AI/ML pipelines for performance, cost, and reliability at scale | Module 202 - Distributed Training<br>Module 204 - Model Optimization<br>Module 206 - Advanced MLOps |
+| Mentor junior engineers and conduct code/architecture reviews | Module 210 - Technical Leadership & Mentorship<br>Module 208 - IaC & GitOps |
+| Design and implement advanced GPU workload management and orchestration | Module 201 - Advanced Kubernetes<br>Module 203 - GPU Computing<br>Project 204 - Custom Kubernetes Operator |
+| Build and optimize distributed training infrastructure using Ray, Horovod, or similar frameworks | Module 202 - Distributed Training<br>Project 201 - Distributed Training Platform |
+| Implement advanced monitoring, alerting, and observability solutions | Module 207 - Observability & SRE<br>Project 202 - Enterprise Model Serving |
+| Lead incident response and post-mortem analysis for critical systems | Module 207 - Observability & SRE<br>Module 209 - Security & Compliance |
+| Optimize model inference pipelines using TensorRT, ONNX, and quantization techniques | Module 204 - Model Optimization<br>Project 202 - Enterprise Model Serving |
+| Design multi-region and multi-cloud deployment strategies | Module 205 - Multi-Cloud Architecture<br>Project 203 - Multi-Region Deployment |

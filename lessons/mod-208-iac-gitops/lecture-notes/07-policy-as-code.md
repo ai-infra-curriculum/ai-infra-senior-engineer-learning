@@ -1,5 +1,18 @@
 # Lecture 7: Policy as Code
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design policy-as-code systems using Open Policy Agent (OPA) or HashiCorp Sentinel enforcing security, compliance, and best practice policies through automated validation
+- Implement OPA policies written in Rego language validating Kubernetes manifests, Terraform plans, and API requests against organizational requirements before deployment
+- Configure Sentinel policies for Terraform Cloud/Enterprise with policy sets, enforcement levels (advisory, soft-mandatory, hard-mandatory), and cost controls
+- Architect CI/CD policy enforcement pipelines with automated policy validation, violation reporting, and deployment blocking for non-compliant changes
+- Design compliance automation frameworks mapping policies to regulatory requirements (SOC2, PCI-DSS, HIPAA, GDPR) with audit trails and compliance reporting
+- Implement ML infrastructure security policies including GPU quota enforcement, data access controls, model registry permissions, and resource tagging requirements
+- Build policy testing workflows with unit tests, integration tests, and regression tests ensuring policy logic correctness before production deployment
+- Architect policy governance processes with policy versioning, change approval, impact analysis, and gradual rollout minimizing disruption to development teams
+
 ## Table of Contents
 1. [Introduction to Policy as Code](#introduction-to-policy-as-code)
 2. [Open Policy Agent (OPA)](#open-policy-agent-opa)

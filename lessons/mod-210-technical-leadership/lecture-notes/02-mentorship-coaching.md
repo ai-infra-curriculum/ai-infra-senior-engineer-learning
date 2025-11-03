@@ -1,5 +1,18 @@
 # Lecture 2: Mentorship and Coaching
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Distinguish mentorship from coaching applying long-term holistic career guidance vs short-term goal-focused approaches choosing appropriate methods
+- Implement active listening using HEAR framework halting engaging anticipating responding thoughtfully building understanding through focused attention
+- Apply powerful questioning techniques using understanding exploration action frameworks facilitating growth through inquiry not prescription
+- Conduct effective coaching sessions implementing GROW model setting goals assessing reality exploring options committing to action plans
+- Provide constructive feedback using SBI model describing situation behavior impact clearly linking actions to outcomes with specificity
+- Guide career development understanding technical ladder progression conducting structured 1-on-1s aligning individual growth with organizational needs
+- Execute knowledge transfer strategies implementing documentation pairing shadowing teaching progressively transferring ownership and capability
+- Build high-performing teams facilitating Tuckman's stages creating learning culture supporting team development through forming storming norming performing
+
 ## Table of Contents
 1. [Mentorship vs Coaching](#mentorship-vs-coaching)
 2. [Effective Mentoring Techniques](#effective-mentoring-techniques)

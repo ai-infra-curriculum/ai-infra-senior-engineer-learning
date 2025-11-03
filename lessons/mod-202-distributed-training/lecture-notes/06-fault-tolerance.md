@@ -1,5 +1,18 @@
 # Lecture 06: Fault Tolerance and Checkpointing
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design fault-tolerant distributed training systems that can detect, recover from, and continue training after hardware, software, and transient failures
+- Implement comprehensive checkpointing strategies including incremental, sharded, and distributed checkpointing for large-scale models
+- Configure elastic training systems that dynamically adapt to changing cluster sizes with worker addition and removal during training
+- Implement automatic failure detection mechanisms for identifying GPU failures, network disconnections, NaN/Inf errors, and training hangs
+- Design state consistency verification and synchronization protocols to ensure all workers maintain identical model and optimizer states
+- Implement emergency checkpoint mechanisms and watchdog systems that preserve training state during unexpected interruptions
+- Calculate failure probability for large-scale training runs and design appropriate checkpoint frequency strategies
+- Build production-ready fault-tolerant trainers with automatic recovery, state verification, and minimal training interruption
+
 ## Table of Contents
 
 1. [Introduction to Fault Tolerance](#introduction)

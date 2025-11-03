@@ -1,14 +1,21 @@
 # Multi-Cloud Networking Architecture
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design multi-cloud network topologies that connect AWS, GCP, and Azure workloads using VPN, dedicated interconnects, and transit gateway architectures
+- Implement secure cross-cloud connectivity using AWS Direct Connect, Google Cloud Interconnect, and Azure ExpressRoute with BGP routing and private peering
+- Architect network cost optimization strategies minimizing egress charges ($0.08-0.12/GB) through regional placement, CDN usage, and private connectivity options
+- Configure multi-cloud VPN solutions using site-to-site VPNs, cloud VPN gateways, and high-availability IPsec tunnels for redundant connectivity
+- Design IP address management (IPAM) strategies avoiding CIDR conflicts, implementing subnet planning, and managing address space across multiple clouds
+- Implement network security controls including cloud-agnostic firewalls, network segmentation, DDoS protection, and Web Application Firewalls (WAF)
+- Optimize network performance for ML workloads using placement groups, accelerated networking, jumbo frames, and bandwidth reservations for large data transfers
+- Monitor multi-cloud network health with unified observability using VPC Flow Logs, network packet capture, latency monitoring, and cross-cloud trace analysis
+
 ## Overview
 
 Networking is one of the most complex aspects of multi-cloud infrastructure. This lesson covers strategies for connecting workloads across AWS, GCP, and Azure, implementing secure connectivity, and optimizing network performance for AI workloads.
-
-**Learning Objectives:**
-- Design multi-cloud network topologies
-- Implement secure cross-cloud connectivity
-- Optimize network performance for ML workloads
-- Understand cloud interconnect services
 
 ---
 

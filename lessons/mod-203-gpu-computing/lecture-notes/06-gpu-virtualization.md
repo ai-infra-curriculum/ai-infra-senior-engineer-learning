@@ -1,5 +1,18 @@
 # Lecture 06: GPU Virtualization and Sharing Strategies
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design multi-tenant GPU infrastructure using MIG (Multi-Instance GPU) to provide hardware-isolated GPU resources with QoS guarantees for different teams and workloads
+- Implement NVIDIA vGPU solutions for virtualized environments enabling GPU acceleration in VMs with live migration support for enterprise infrastructure
+- Configure GPU sharing strategies (MIG, MPS, time-slicing) based on workload isolation requirements, QoS needs, and cost optimization objectives
+- Architect Kubernetes-based GPU clusters with MIG support using GPU Operator to provide flexible GPU resource allocation and scheduling for containerized workloads
+- Evaluate trade-offs between different GPU sharing approaches (MIG vs MPS vs time-slicing vs vGPU) based on performance isolation, overhead, and use case requirements
+- Implement fractional GPU allocation strategies for inference serving to maximize GPU utilization while maintaining predictable latency for production services
+- Design capacity planning strategies for shared GPU infrastructure that balance resource utilization, cost efficiency, and user experience based on usage patterns
+- Troubleshoot common GPU sharing issues including memory contention, performance interference, and MIG configuration problems using monitoring and diagnostic tools
+
 ## Table of Contents
 1. [Introduction to GPU Virtualization](#introduction-to-gpu-virtualization)
 2. [Multi-Instance GPU (MIG)](#multi-instance-gpu-mig)

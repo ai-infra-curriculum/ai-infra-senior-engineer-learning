@@ -1,5 +1,18 @@
 # Lecture 05: Multi-GPU Strategies and Parallel Training
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design distributed training architectures that combine data parallelism, model parallelism, pipeline parallelism, and tensor parallelism for training models that exceed single-GPU capacity
+- Implement PyTorch DistributedDataParallel (DDP) and FSDP (Fully Sharded Data Parallel) for efficient multi-node training with optimal gradient synchronization strategies
+- Configure NCCL collective operations (AllReduce, Broadcast, ReduceScatter) with proper topology awareness and tuning parameters to minimize communication overhead
+- Architect hybrid parallelism strategies (3D parallelism) for training large language models (100B+ parameters) using frameworks like Megatron-LM and DeepSpeed
+- Evaluate scaling efficiency metrics (strong scaling, weak scaling) and identify sources of scaling overhead to optimize multi-GPU training performance
+- Implement gradient accumulation, gradient compression, and communication-computation overlap techniques to reduce communication bottlenecks in distributed training
+- Design fault-tolerant multi-GPU training systems with proper checkpoint strategies and elastic training capabilities for production reliability
+- Troubleshoot common multi-GPU issues including NCCL timeouts, imbalanced GPU utilization, and network bandwidth limitations using profiling and monitoring tools
+
 ## Table of Contents
 1. [Introduction to Multi-GPU Training](#introduction-to-multi-gpu-training)
 2. [Data Parallelism](#data-parallelism)

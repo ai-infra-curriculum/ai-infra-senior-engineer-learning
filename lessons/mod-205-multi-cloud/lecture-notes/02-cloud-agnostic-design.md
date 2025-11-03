@@ -1,5 +1,18 @@
 # Lecture 02: Cloud-Agnostic Design Patterns for ML Infrastructure
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design cloud-agnostic ML infrastructure using Kubernetes as abstraction layer across AWS EKS, Google GKE, and Azure AKS achieving 70% portability with 30% cloud-native optimization
+- Implement service mesh architectures (Istio, Linkerd) for cross-cloud connectivity enabling secure, encrypted communication between workloads across multiple cloud providers
+- Architect storage abstraction patterns using CSI drivers, S3-compatible interfaces, and data replication strategies to achieve unified data access across clouds
+- Configure multi-cloud networking with VPN/VPC peering, transit gateways, and private connectivity (AWS PrivateLink, GCP Private Service Connect, Azure Private Link)
+- Implement federated identity and access management using OIDC, SAML, and cloud-agnostic IAM patterns to provide consistent authentication across providers
+- Design container registry strategies including multi-cloud replication, image signing/scanning, and artifact management for consistent deployments
+- Apply configuration management patterns using GitOps, Helm, and cloud-agnostic secrets management (HashiCorp Vault, External Secrets Operator) for portable configurations
+- Build unified observability systems using OpenTelemetry, Prometheus, and vendor-agnostic monitoring that aggregate metrics, logs, and traces across multiple clouds
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Kubernetes as the Abstraction Layer](#kubernetes-abstraction)

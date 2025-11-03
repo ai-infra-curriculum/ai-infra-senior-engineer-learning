@@ -1,5 +1,18 @@
 # Lecture 01: Multi-Cloud Strategy for AI/ML Infrastructure
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design multi-cloud strategies evaluating business drivers including vendor lock-in avoidance, cost optimization, risk distribution, and specialized hardware access (GPUs/TPUs)
+- Architect multi-cloud deployment patterns (multi-cloud aware, multi-cloud native, cloud-agnostic) selecting appropriate approach based on organizational goals and technical constraints
+- Implement vendor lock-in mitigation strategies using abstraction layers, open-source tools, and portable data formats to maintain negotiation leverage and exit optionality
+- Design data sovereignty and compliance architectures that satisfy regional data residency requirements while maintaining operational efficiency across multiple cloud providers
+- Evaluate multi-cloud risk management trade-offs analyzing disaster recovery capabilities, availability improvements, and operational complexity increases
+- Apply decision frameworks to determine when multi-cloud is justified vs single-cloud optimization, considering TCO, team capabilities, and business requirements
+- Identify and avoid common multi-cloud anti-patterns including unnecessary complexity, shadow IT poly-cloud, and premature abstraction without clear business value
+- Analyze real-world multi-cloud architectures from major companies identifying successful patterns and lessons learned from production deployments at scale
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Business Drivers for Multi-Cloud](#business-drivers)

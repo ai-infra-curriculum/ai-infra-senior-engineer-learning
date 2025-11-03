@@ -1,5 +1,18 @@
 # Lecture 03: StatefulSets and Storage Architecture
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and deploy StatefulSets for distributed ML workloads requiring stable identity and persistent storage
+- Implement Container Storage Interface (CSI) drivers for high-performance storage in ML training environments
+- Configure storage classes and dynamic provisioning for efficient resource allocation across training workloads
+- Implement volume snapshots and cloning for checkpoint management and experiment reproducibility
+- Optimize data locality and storage performance for large-scale model training and feature stores
+- Design backup and restore strategies for stateful ML applications and model registries
+- Troubleshoot common StatefulSet issues including pod initialization, volume attachment, and scaling problems
+- Evaluate trade-offs between different storage solutions (block vs. file vs. object storage) for ML workloads
+
 ## Table of Contents
 1. [Introduction to StatefulSets](#introduction)
 2. [Persistent Storage for ML Workloads](#persistent-storage)

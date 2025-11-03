@@ -1,5 +1,18 @@
 # Lecture 5: Compliance Frameworks for ML Systems
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design compliance architectures for ML systems meeting SOC 2, ISO 27001, PCI-DSS, HIPAA, and GDPR requirements with appropriate controls and audit trails
+- Implement automated compliance monitoring using policy-as-code (OPA, Sentinel), configuration scanning, and continuous compliance validation
+- Architect data governance frameworks with data classification, access policies, retention schedules, and deletion procedures for regulatory compliance
+- Configure audit logging and reporting with comprehensive activity logs, tamper-proof storage, and compliance report generation for auditor reviews
+- Design incident response procedures for compliance violations with detection, containment, remediation, and reporting workflows meeting regulatory timelines
+- Implement ML-specific compliance controls including model versioning, training data lineage, bias detection, and explainability for regulated industries
+- Build compliance-as-code systems with Infrastructure-as-Code, configuration management, and automated remediation ensuring continuous compliance
+- Architect multi-region compliance strategies addressing data sovereignty, cross-border data transfer requirements, and regional regulatory differences
+
 ## Table of Contents
 1. [Introduction to Compliance](#introduction-to-compliance)
 2. [GDPR for ML Systems](#gdpr-for-ml-systems)

@@ -1,5 +1,18 @@
 # Lecture 06: LLM Inference Optimization
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design LLM serving architectures that address autoregressive generation bottlenecks including KV cache memory growth, memory bandwidth limitations, and latency vs throughput trade-offs
+- Implement vLLM with PagedAttention achieving 8-10x throughput improvement through block-based KV cache management and continuous batching with 80-95% memory utilization
+- Configure TensorRT-LLM engines with multi-GPU tensor parallelism, advanced quantization (FP16, INT8, FP8, INT4 AWQ/GPTQ), and in-flight batching for maximum performance
+- Architect speculative decoding systems using draft models to generate candidate tokens achieving 2-3x speedup with parallel verification by target models
+- Implement KV cache optimization techniques including INT8/FP8 quantization (2-4x memory savings), Multi-Query Attention (MQA), and Grouped-Query Attention (GQA)
+- Configure multi-GPU LLM serving with tensor parallelism (split weights) and pipeline parallelism (split layers) using NVLink for efficient all-reduce communication
+- Design continuous batching systems that dynamically adjust batch size as requests arrive and finish achieving 2-10x better throughput and lower latency than static batching
+- Deploy production LLM serving systems with appropriate quantization, memory utilization targets (90%), monitoring (TTFT, TPOT, throughput), and graceful degradation strategies
+
 ## Table of Contents
 1. [LLM Inference Challenges](#challenges)
 2. [Autoregressive Generation Bottlenecks](#bottlenecks)

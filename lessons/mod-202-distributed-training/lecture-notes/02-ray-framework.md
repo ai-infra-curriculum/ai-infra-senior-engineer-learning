@@ -1,5 +1,18 @@
 # Lecture 02: Ray Framework for Distributed Training
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and deploy Ray clusters on Kubernetes for production ML workloads
+- Implement distributed training pipelines using Ray Train for PyTorch and TensorFlow models
+- Configure Ray Tune for scalable hyperparameter optimization across hundreds of trials
+- Integrate Ray Data for distributed data preprocessing and loading pipelines
+- Implement fault tolerance and autoscaling for long-running Ray training jobs
+- Optimize Ray cluster performance through resource allocation and task scheduling
+- Deploy production Ray applications with monitoring, logging, and observability
+- Evaluate trade-offs between Ray and alternative distributed training frameworks
+
 ## Table of Contents
 
 1. [Introduction to Ray](#introduction)

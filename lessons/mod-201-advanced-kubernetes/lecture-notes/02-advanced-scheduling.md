@@ -1,5 +1,18 @@
 # Lecture 02: Advanced Scheduling and Resource Management
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Configure and optimize GPU scheduling for ML workloads using device plugins and resource quotas
+- Design node affinity and anti-affinity rules to optimize training performance and high availability
+- Implement taints, tolerations, and priority classes to manage heterogeneous compute clusters
+- Configure resource quotas and limit ranges to prevent resource contention and ensure fair allocation
+- Implement gang scheduling patterns for distributed training jobs requiring coordinated pod placement
+- Design custom scheduling strategies for cost optimization using spot instances and node pools
+- Troubleshoot common scheduling issues including resource fragmentation and pod pending states
+- Evaluate trade-offs between different scheduling approaches for multi-tenant ML platforms
+
 ## Table of Contents
 1. [Introduction to Kubernetes Scheduling](#introduction)
 2. [GPU Scheduling](#gpu-scheduling)

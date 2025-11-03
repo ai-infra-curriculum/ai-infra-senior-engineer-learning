@@ -1,5 +1,18 @@
 # Lecture 03: Log Aggregation
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design log aggregation architectures using ELK/EFK stack or Loki collecting logs from distributed ML workloads with centralized search and analysis
+- Implement structured logging patterns using JSON format with consistent fields (timestamp, severity, service, trace_id, user_id) enabling efficient querying
+- Configure log collection pipelines with Fluentd/Fluent Bit or Promtail handling log parsing, enrichment, filtering, and routing to appropriate storage backends
+- Architect cost-optimized log retention using hot/warm/cold storage tiers, log sampling, and compression achieving 10x cost reduction for long-term storage
+- Design log-based metrics extracting counters and histograms from logs enabling alerting on patterns without maintaining separate metric instrumentation
+- Implement log correlation strategies linking logs across services using trace IDs, request IDs, and session IDs for end-to-end debugging
+- Build log analysis workflows using Kibana, Grafana, or custom tooling for real-time monitoring, anomaly detection, and historical analysis
+- Optimize log infrastructure managing log volume, query performance, index lifecycle management, and cluster sizing for production workloads
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Log Aggregation Architecture](#log-aggregation-architecture)

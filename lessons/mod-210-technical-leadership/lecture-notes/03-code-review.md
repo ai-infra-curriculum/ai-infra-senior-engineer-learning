@@ -1,5 +1,18 @@
 # Lecture 3: Code Review Best Practices
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design collaborative code review processes delivering 10-20x ROI through defect reduction knowledge transfer team cohesion measuring impact systematically
+- Apply comprehensive review checklists evaluating correctness design complexity testing performance security operations systematically prioritizing by change characteristics
+- Provide effective feedback using FIRE framework specifying facts impacts recommendations examples categorizing severity as blocking important suggestion question
+- Receive feedback gracefully detaching ego embracing growth responding thoughtfully to agree clarify disagree defer handling criticism constructively
+- Review ML infrastructure code checking GPU memory management distributed training synchronization model serving validation performance robustness operational readiness
+- Implement code review automation configuring pre-commit hooks CI pipelines static analysis formatting security scanning freeing reviewers for design logic
+- Avoid review anti-patterns preventing nitpicking design debates rewrite suggestions fake approvals ghosting focusing on substance over style
+- Establish review culture using pull request templates setting response time expectations building team capability through consistent quality collaboration practices
+
 ## Table of Contents
 1. [Why Code Reviews Matter](#why-code-reviews-matter)
 2. [The Code Review Mindset](#the-code-review-mindset)

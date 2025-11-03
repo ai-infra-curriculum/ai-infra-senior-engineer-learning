@@ -1,5 +1,18 @@
 # Lecture 03: ONNX Runtime for Cross-Platform Inference
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design cross-platform ML inference architectures using ONNX Runtime that deploy consistently across NVIDIA, AMD, Intel GPUs, ARM CPUs, mobile, and edge devices
+- Implement execution provider selection strategies with appropriate fallback chains (TensorRT→CUDA→CPU) and configure provider-specific optimizations for maximum performance
+- Convert models from PyTorch and TensorFlow to ONNX format with proper dynamic axes, validate with ONNX checker, and simplify graphs using onnx-simplifier
+- Configure ONNX Runtime session options including graph optimization levels, threading parameters, memory optimization, and I/O binding to eliminate CPU-GPU transfers
+- Apply ONNX Runtime quantization techniques including dynamic quantization (weights only) and static quantization (weights and activations) with proper calibration
+- Implement specialized optimizations for Transformer models using fusion patterns for attention, layer normalization, GELU, and embedding layers
+- Profile ONNX Runtime inference with built-in profiling tools, analyze per-layer timings, and benchmark under realistic load to identify performance bottlenecks
+- Deploy ONNX Runtime models across multiple platforms (cloud GPUs, mobile devices, edge hardware) with appropriate execution providers and validate production readiness
+
 ## Table of Contents
 1. [Introduction to ONNX and ONNX Runtime](#introduction)
 2. [ONNX Format Deep Dive](#onnx-format)

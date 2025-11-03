@@ -1,5 +1,18 @@
 # Lecture 6: Building Consensus
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Architect consensus strategies understanding good tech with consensus succeeds vs perfect tech without consensus fails calculating consensus impact
+- Apply consensus spectrum choosing command consult consensus consent vote levels matching decision urgency impact reversibility expertise distribution
+- Execute stakeholder analysis mapping power-interest grid understanding motivations fears tailoring engagement strategies for key players satisfied informed monitored
+- Build alignment early conducting 1-on-1 pre-sells incorporating feedback giving credit reconfirming support creating ownership through collaborative design
+- Handle disagreement constructively implementing disagree and commit framework using five whys finding root causes negotiating based on interests
+- Facilitate effective meetings creating clear agendas using round-robin parking lot silent writing handling dominating speakers side conversations conflicts
+- Influence ethically applying Cialdini's principles using reciprocity commitment consistency social proof authority liking scarcity serving project over ego
+- Navigate consensus failures escalating gracefully using joint escalation providing context moving forward with disagree-commit pilot phased parallel minimal viable approaches
+
 ## Table of Contents
 1. [Why Consensus Matters](#why-consensus-matters)
 2. [The Consensus Spectrum](#the-consensus-spectrum)

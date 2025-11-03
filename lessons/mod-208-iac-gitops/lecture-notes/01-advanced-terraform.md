@@ -1,5 +1,18 @@
 # Lecture 1: Advanced Terraform
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design modular Terraform architectures creating reusable modules for ML infrastructure (GPU clusters, model serving, data pipelines) with proper input validation and outputs
+- Implement remote state management using S3/GCS backends with state locking (DynamoDB/Cloud Storage) and encryption preventing concurrent modifications and data loss
+- Master advanced HCL features including for_each loops, dynamic blocks, conditional expressions, and local values enabling DRY (Don't Repeat Yourself) infrastructure code
+- Configure Terraform workspaces or directory structures organizing multi-environment deployments (dev/staging/prod) with shared modules and environment-specific configurations
+- Implement Terraform Cloud/Enterprise workflows with remote execution, policy enforcement (Sentinel), cost estimation, and team collaboration features
+- Design ML infrastructure patterns using Terraform provisioning SageMaker, Vertex AI, EKS/GKE GPU clusters, and supporting services (VPC, IAM, storage)
+- Optimize Terraform performance using targeted applies, parallelism controls, and resource targeting for large infrastructure codebases (1000+ resources)
+- Build Terraform CI/CD pipelines with automated plan, approval gates, automated apply, and drift detection ensuring infrastructure changes follow proper change management
+
 ## Table of Contents
 1. [Terraform Modules](#terraform-modules)
 2. [State Management](#state-management)

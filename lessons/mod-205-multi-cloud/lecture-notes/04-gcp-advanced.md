@@ -1,5 +1,18 @@
 # Lecture 04: GCP Advanced Services for ML Infrastructure
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design production ML systems on GCP leveraging Vertex AI for managed ML, GKE for Kubernetes workloads, and Cloud TPU infrastructure for large-scale training
+- Architect Vertex AI pipelines integrating data preparation with BigQuery, distributed training with custom containers, hyperparameter tuning, and Vertex Endpoints for serving
+- Configure GKE clusters optimized for ML workloads with TPU/GPU node pools, GKE Autopilot for serverless nodes, and GCS FUSE for data access patterns
+- Implement Cloud TPU training workflows for large models (>10B parameters) using TPU Pods, JAX/TensorFlow frameworks, and TPU-optimized data pipelines
+- Design BigQuery ML architectures for in-warehouse ML using SQL-based model training, AutoML Tables integration, and federated queries across clouds
+- Configure GCP cost optimization strategies using Preemptible VMs for training, committed use discounts for inference, and BigQuery slot reservations
+- Architect GCP networking for ML including VPC design, Private Google Access for GCS/BigQuery, Cloud Interconnect for hybrid, and multi-region failover
+- Build production ML platforms on GCP integrating Cloud IAM, Cloud Monitoring, Pub/Sub for event-driven workflows, and GCP compliance frameworks (ISO, SOC2)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Vertex AI Platform](#vertex-ai)

@@ -1,11 +1,17 @@
 # Lecture 06: Canary Deployments for ML Models
 
 ## Learning Objectives
-- Understand canary deployment strategies
-- Implement automated rollback mechanisms
-- Master traffic routing patterns
-- Monitor canary deployments effectively
-- Integrate with Kubernetes and service meshes
+
+By the end of this lecture, you will be able to:
+
+- Design canary deployment strategies gradually routing production traffic to new model versions (5%→25%→50%→100%) with automated progression or rollback
+- Implement automated rollback mechanisms using health checks, error rate monitoring, and anomaly detection triggering instant traffic shift to stable version
+- Architect traffic routing patterns using Kubernetes Ingress, Istio service mesh, or AWS App Mesh for fine-grained canary traffic control
+- Configure canary analysis with synthetic monitoring, real-user monitoring, and comparative metrics analysis (canary vs baseline) for deployment validation
+- Design shadow deployments duplicating production traffic to new models without affecting users enabling safe validation before canary rollout
+- Implement blue-green deployments with instant traffic switching and fast rollback as alternative to gradual canary progression
+- Build deployment pipelines automating canary workflows with GitOps, Argo Rollouts/Flagger, and integration with CI/CD for continuous deployment
+- Monitor canary deployments tracking latency percentiles (p50/p95/p99), error rates, prediction quality, and business metrics to make promotion decisions
 
 ## Overview
 

@@ -831,10 +831,58 @@ A: The AI Infrastructure Architect curriculum (coming soon) or specialized roles
 
 ---
 
+## Curriculum Documentation
+
+### Comprehensive Guides
+
+This repository includes detailed curriculum documentation to enhance your learning experience:
+
+#### [Lesson-to-Exercise Mapping](LESSON_EXERCISE_MAPPING.md)
+Complete mapping of all 74 lectures to 36 hands-on labs across 10 modules. Understand which labs reinforce which lectures, identify coverage gaps, and see how exercises integrate across modules.
+
+**Highlights**:
+- Detailed lecture-to-lab mappings for each module
+- Coverage analysis (Excellent, Good ratings)
+- Lab descriptions and learning objectives
+- Recommendations for additional exercises
+
+#### [Exercise Coverage Review](EXERCISE_COVERAGE_REVIEW.md)
+In-depth review of the 4 modules with 3 labs (Modules 205, 207, 209, 210), including recommendations for optional enhancement labs to elevate coverage from "Good" to "Excellent."
+
+**Highlights**:
+- Coverage analysis for 3-lab modules
+- Proposed enhancement labs with detailed rationale
+- Priority classification (High/Medium)
+- Alternative approaches (extending existing labs vs creating new ones)
+
+#### [Solution Availability Documentation](SOLUTION_AVAILABILITY.md)
+Comprehensive overview of solution availability for all 36 labs and 4 major projects. Understand which exercises have solutions, where to find them, and how to maximize learning effectiveness.
+
+**Highlights**:
+- Module lab solution status (36 labs)
+- Project solution catalog (4 complete projects - 100% coverage)
+- Solutions repository structure and metrics
+- Learning strategies for labs without solutions
+- Comparison with other curricula (Junior, Engineer levels)
+
+### Key Statistics
+
+- **Total Lectures**: 74 (across 10 modules)
+- **Total Labs**: 36 (average 3.6 per module)
+- **Total Projects**: 4 major capstone projects
+- **Solution Coverage**: 100% for projects, labs designed for independent work
+- **Documentation**: 40,000+ words of curriculum guides
+
+---
+
 ## Version History
 
+- **v1.1** (2025-10-31): Added comprehensive curriculum documentation (lesson mapping, coverage review, solution availability)
+  - Added learning objectives to all 74 lectures
+  - Created LESSON_EXERCISE_MAPPING.md with complete lecture-to-lab mappings
+  - Created EXERCISE_COVERAGE_REVIEW.md with recommendations for 3-lab modules
+  - Created SOLUTION_AVAILABILITY.md documenting all exercise solutions
 - **v1.0** (2025-10): Initial release with 10 modules and 4 projects
-- More updates coming soon!
 
 ---
 

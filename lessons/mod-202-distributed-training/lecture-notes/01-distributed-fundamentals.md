@@ -1,5 +1,18 @@
 # Lecture 01: Distributed Training Fundamentals
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Analyze memory and compute requirements for large-scale model training and determine when distributed training is necessary
+- Design distributed training architectures using data parallelism, model parallelism, pipeline parallelism, and tensor parallelism
+- Implement hybrid parallelism strategies for training models exceeding single-device memory capacity
+- Configure gradient synchronization strategies (AllReduce, parameter servers) for optimal training performance
+- Evaluate communication patterns and bottlenecks in distributed training systems
+- Calculate scaling efficiency metrics and identify sources of training overhead
+- Design fault-tolerant distributed training systems with checkpoint and recovery strategies
+- Optimize distributed training performance by balancing compute, communication, and memory constraints
+
 ## Table of Contents
 
 1. [Introduction to Distributed Training](#introduction)

@@ -1,5 +1,18 @@
 # Lecture 02: TensorRT Deep Dive
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Architect TensorRT optimization pipelines that leverage layer fusion, kernel auto-tuning, and precision calibration to achieve 2-10x speedup over framework inference
+- Implement INT8 quantization with multiple calibration algorithms (entropy, minmax, percentile) using representative calibration datasets of 500-1000 samples
+- Configure dynamic shape optimization profiles with appropriate min/opt/max ranges to handle variable batch sizes and sequence lengths in production
+- Design custom TensorRT plugins in C++/CUDA for unsupported operations with optimized kernels, proper memory management, and multi-precision support
+- Implement FP16/INT8 mixed precision strategies with per-layer precision control to balance performance gains with accuracy requirements
+- Configure advanced TensorRT features including timing cache for faster rebuilds, multi-stream execution, and version compatibility management
+- Troubleshoot common TensorRT issues including calibration accuracy degradation, dynamic shape performance problems, and out-of-memory errors
+- Benchmark TensorRT engines with proper warmup, measure latency percentiles and throughput, and profile per-layer execution time using NVIDIA Nsight tools
+
 ## Table of Contents
 1. [Introduction to TensorRT](#introduction)
 2. [TensorRT Architecture](#architecture)

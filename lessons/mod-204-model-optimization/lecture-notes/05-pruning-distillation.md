@@ -1,5 +1,18 @@
 # Lecture 05: Model Pruning and Knowledge Distillation
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design model compression strategies selecting appropriate techniques (pruning, distillation, low-rank factorization, PEFT) based on target compression ratio and accuracy constraints
+- Implement magnitude-based pruning algorithms including gradual pruning schedules and iterative magnitude pruning (Lottery Ticket Hypothesis) achieving 50-90% sparsity
+- Architect structured pruning solutions that remove entire channels, filters, or heads for immediate speedup on standard hardware without specialized sparse kernels
+- Apply N:M sparsity patterns (2:4 sparsity) to leverage NVIDIA Ampere Tensor Core acceleration achieving 2x speedup with minimal accuracy loss
+- Implement knowledge distillation training student models from teacher models using soft targets, temperature scaling, and feature-based distillation for 2-10x model compression
+- Configure LoRA (Low-Rank Adaptation) and QLoRA for parameter-efficient fine-tuning achieving 99%+ reduction in trainable parameters while maintaining model quality
+- Combine multiple compression techniques (distillation + quantization + pruning) in multi-stage pipelines for maximum compression (10-100x) with controlled accuracy degradation
+- Validate compressed models comprehensively measuring accuracy, latency, memory, throughput, and per-class performance before production deployment
+
 ## Table of Contents
 1. [Introduction to Model Compression](#introduction)
 2. [Neural Network Pruning](#pruning)

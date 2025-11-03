@@ -1,5 +1,18 @@
 # Lecture 04: GPU Profiling and Performance Analysis
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design systematic GPU profiling workflows using Nsight Systems and Nsight Compute to identify and diagnose performance bottlenecks in ML training and inference pipelines
+- Analyze GPU kernel performance using roofline analysis, occupancy metrics, and memory bandwidth utilization to determine optimization priorities
+- Implement targeted optimizations based on profiling insights including kernel fusion, memory coalescing, and asynchronous operations to eliminate identified bottlenecks
+- Configure NVTX annotations and custom profiling ranges in training code to precisely measure performance of specific operations and isolate problem areas
+- Evaluate trade-offs between profiling overhead and measurement precision to select appropriate profiling strategies for development vs production environments
+- Interpret Tensor Core utilization metrics and implement optimizations (alignment, layout, precision) to maximize Tensor Core usage in deep learning workloads
+- Design performance regression detection systems that automatically profile training runs and alert on performance degradation compared to baseline metrics
+- Troubleshoot common GPU performance issues including CPU-GPU synchronization stalls, data loading bottlenecks, and suboptimal kernel launch configurations using profiling tools
+
 ## Table of Contents
 1. [Introduction to GPU Profiling](#introduction-to-gpu-profiling)
 2. [Profiling Methodology](#profiling-methodology)

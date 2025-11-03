@@ -1,11 +1,19 @@
 # Lecture 08: Capacity Planning for ML Workloads
 
 ## Learning Objectives
-- Understand capacity planning for ML systems
-- Learn resource forecasting techniques
-- Master cost optimization strategies
-- Plan for growth and scaling
-- Implement efficient resource allocation
+
+By the end of this lecture, you will be able to:
+
+- Design capacity planning strategies for ML workloads forecasting training (bursty, GPU-intensive), inference (steady-state, latency-sensitive), and data processing needs
+- Implement resource forecasting techniques using historical utilization data, growth projections, and workload modeling predicting future capacity requirements 6-12 months ahead
+- Architect cost optimization strategies leveraging spot instances for training (70% savings), reserved capacity for inference, and autoscaling for variable workloads
+- Configure resource allocation policies with GPU quotas, priority scheduling, preemption rules, and fair-share mechanisms ensuring efficient multi-tenant resource utilization
+- Design scaling strategies including horizontal scaling (adding nodes), vertical scaling (larger instances), and workload optimization (batching, caching) for growing ML platforms
+- Implement capacity monitoring tracking GPU utilization, memory usage, storage consumption, and network bandwidth identifying bottlenecks and optimization opportunities
+- Build cost allocation systems with chargeback/showback models attributing infrastructure costs to teams, projects, and workloads enabling informed spending decisions
+- Architect capacity planning workflows with quarterly reviews, budgeting processes, procurement timelines, and continuous optimization aligning infrastructure with business growth
+
+## Overview
 
 ## Overview
 

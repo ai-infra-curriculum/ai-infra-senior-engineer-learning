@@ -1,5 +1,18 @@
 # Lecture 02: Distributed Tracing
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design distributed tracing architectures using OpenTelemetry, Jaeger, or Zipkin providing end-to-end visibility into ML inference requests across microservices
+- Implement trace instrumentation for ML services capturing spans for data preprocessing, feature extraction, model inference, post-processing, and caching layers
+- Configure trace sampling strategies balancing observability coverage with performance overhead using head-based, tail-based, and adaptive sampling techniques
+- Analyze trace data identifying performance bottlenecks, latency percentiles, critical path analysis, and service dependencies in complex ML systems
+- Design context propagation strategies ensuring trace IDs flow correctly through HTTP, gRPC, message queues, and async processing maintaining request correlation
+- Implement trace-based alerting on anomalous latency patterns, error rates, and SLO violations triggering automatic investigation or remediation workflows
+- Optimize tracing performance managing trace volume, reducing sampling overhead, and using async exporters to minimize impact on application latency
+- Build trace analysis workflows correlating traces with logs and metrics for comprehensive debugging and root cause analysis of production issues
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Why Distributed Tracing Matters for ML](#why-distributed-tracing-matters-for-ml)

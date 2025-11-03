@@ -1,17 +1,21 @@
 # Lecture 8: Multi-Cloud Disaster Recovery
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design multi-cloud DR architectures that meet specific RTO/RPO requirements (e.g., RTO <1hr, RPO <15min) using appropriate patterns (backup/restore, pilot light, warm standby, hot standby)
+- Implement data replication strategies across clouds using object storage replication (S3→GCS, cross-region replication), database replication (read replicas, CDC), and filesystem sync
+- Architect automated failover mechanisms using DNS-based failover (Route 53, Cloud DNS), load balancer failover, and application-level health checks with automatic traffic shifting
+- Configure cross-cloud backup solutions implementing 3-2-1 backup strategy (3 copies, 2 media types, 1 offsite) with encrypted backups and lifecycle management
+- Design failback procedures including data synchronization strategies, conflict resolution, and gradual traffic shifting to minimize risk during recovery to primary site
+- Implement DR testing programs with regular DR drills, automated validation, runbook execution, and RTO/RPO measurement to ensure DR readiness
+- Build chaos engineering practices for DR validation using failure injection, service disruption tests, and multi-cloud resilience testing to identify weaknesses
+- Develop comprehensive DR documentation including disaster recovery plans, communication procedures, escalation paths, and post-incident review processes
+
 ## Overview
 
 Disaster Recovery (DR) in multi-cloud environments provides unprecedented resilience and flexibility. This lecture covers comprehensive DR strategies, from designing multi-cloud DR architectures to implementing automated failover mechanisms and testing procedures.
-
-## Learning Objectives
-
-- Understand RTO/RPO requirements and their impact on DR design
-- Design multi-cloud DR architectures
-- Implement automated failover and failback procedures
-- Master data replication strategies across clouds
-- Conduct effective DR testing and validation
-- Develop comprehensive DR plans and runbooks
 
 ---
 

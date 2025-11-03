@@ -1,5 +1,18 @@
 # Lecture 01: CUDA Fundamentals
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and implement custom CUDA kernels for ML workload optimization when framework-provided operations are insufficient
+- Architect memory access patterns that maximize coalescing efficiency and minimize bank conflicts for optimal GPU memory bandwidth utilization
+- Implement thread hierarchy strategies (grids, blocks, warps) that balance occupancy, register usage, and shared memory constraints for specific workloads
+- Configure and optimize kernel launch parameters using occupancy calculators to achieve maximum SM utilization for different kernel characteristics
+- Integrate custom CUDA operations into PyTorch and TensorFlow training pipelines using framework extension APIs
+- Evaluate performance trade-offs between CUDA kernel optimizations (occupancy vs register pressure, shared memory vs global memory)
+- Implement synchronization primitives and atomic operations correctly to avoid race conditions in multi-threaded GPU kernels
+- Design CUDA-accelerated data preprocessing and augmentation pipelines to eliminate CPU-GPU transfer bottlenecks in training workflows
+
 ## Table of Contents
 1. [Introduction to CUDA](#introduction-to-cuda)
 2. [CUDA Programming Model](#cuda-programming-model)

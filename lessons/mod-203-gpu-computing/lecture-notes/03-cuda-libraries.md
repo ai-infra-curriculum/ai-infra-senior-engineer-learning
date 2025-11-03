@@ -1,5 +1,18 @@
 # Lecture 03: CUDA Libraries for Machine Learning
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design production ML inference pipelines using TensorRT optimizations including layer fusion, precision calibration, and kernel auto-tuning to achieve 2-10x latency reduction
+- Implement cuDNN-optimized training workflows that leverage efficient convolution algorithms, persistent RNNs, and fused operations for maximum training throughput
+- Configure cuBLAS and cuSPARSE operations with optimal parameters (algorithm selection, workspace size, matrix layout) for specific model architectures
+- Integrate Triton Inference Server with multiple ML frameworks (PyTorch, TensorFlow, ONNX) to build scalable multi-model serving infrastructure
+- Evaluate trade-offs between different CUDA library implementations (cuDNN algorithms, TensorRT precision modes) based on accuracy, latency, and throughput requirements
+- Implement mixed precision inference using TensorRT INT8 quantization with proper calibration workflows to maintain model accuracy while reducing memory and latency
+- Design custom CUDA operations that integrate seamlessly with cuDNN/cuBLAS for specialized ML operations not covered by standard libraries
+- Troubleshoot common CUDA library issues including version compatibility, workspace allocation failures, and algorithm selection performance problems
+
 ## Table of Contents
 1. [Introduction to CUDA Libraries](#introduction-to-cuda-libraries)
 2. [cuDNN - Deep Neural Network Library](#cudnn---deep-neural-network-library)

@@ -1,5 +1,18 @@
 # Lecture 04: Advanced Networking and Service Mesh
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and implement advanced Kubernetes networking architectures using CNI plugins for ML workloads
+- Deploy and configure service mesh (Istio/Linkerd) for production ML inference services
+- Implement intelligent traffic management including A/B testing, canary deployments, and circuit breaking
+- Configure mutual TLS (mTLS) for secure service-to-service communication in multi-tenant environments
+- Implement distributed tracing and observability for complex ML serving pipelines
+- Design network policies for zero-trust security in ML infrastructure
+- Optimize network performance for low-latency inference and high-throughput training data transfer
+- Troubleshoot complex networking issues including DNS resolution, service connectivity, and load balancing
+
 ## Table of Contents
 1. [Kubernetes Networking Deep Dive](#networking-deep-dive)
 2. [Container Network Interface (CNI)](#cni)

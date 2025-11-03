@@ -1,11 +1,17 @@
 # Lecture 05: A/B Testing for ML Models
 
 ## Learning Objectives
-- Understand A/B testing principles for ML models
-- Learn statistical significance testing methods
-- Master multi-armed bandit algorithms
-- Implement progressive rollout strategies
-- Design and analyze ML experiments
+
+By the end of this lecture, you will be able to:
+
+- Design A/B testing strategies for ML models that measure real business impact beyond offline metrics validating models with production traffic before full rollout
+- Implement statistical significance testing using t-tests, chi-square tests, and sequential testing (SPRT) with proper sample size calculation and power analysis
+- Architect multi-armed bandit algorithms (epsilon-greedy, Thompson sampling, UCB) for dynamic traffic allocation maximizing performance while exploring new models
+- Configure progressive rollout strategies with automated traffic ramping (5%→10%→25%→50%→100%) based on confidence intervals and business metrics
+- Design experiment frameworks tracking multiple metrics (business KPIs, ML metrics, latency, error rates) with guardrail metrics preventing harmful deployments
+- Implement A/B test infrastructure with proper randomization (user-level, session-level), consistent bucketing, and treatment assignment logging
+- Analyze A/B test results calculating statistical significance, confidence intervals, minimum detectable effect, and making ship/no-ship decisions
+- Build experimentation platforms enabling data scientists to self-serve A/B tests with experiment configuration, automated analysis, and result visualization
 
 ## Overview
 

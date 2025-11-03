@@ -1,5 +1,18 @@
 # Lecture 08: GPU Cluster Design and Architecture
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design enterprise-scale GPU clusters following NVIDIA BasePOD reference architectures with proper consideration for network topology, storage, power, and cooling requirements
+- Architect high-performance network fabrics using NVSwitch, NVLink, InfiniBand, or RoCE with proper topology design to minimize communication bottlenecks in distributed training
+- Implement GPUDirect RDMA and NCCL optimizations to achieve maximum inter-node GPU communication bandwidth and minimize latency for multi-node training workloads
+- Design tiered storage architectures combining local NVMe, parallel filesystems, and object storage to optimize data loading performance and cost for different ML workflow stages
+- Evaluate GPU cluster configurations (DGX systems, networking, storage) based on workload requirements, budget constraints, and scalability objectives for organizations of different sizes
+- Calculate and plan for power, cooling, and datacenter infrastructure requirements including PDUs, UPS systems, and cooling strategies (air, liquid, immersion) for high-density GPU deployments
+- Architect fault-tolerant GPU infrastructure with redundant network paths, storage systems, and power distribution to minimize single points of failure in production ML platforms
+- Design capacity planning and growth strategies for GPU clusters that balance immediate needs with future scalability using modular expansion approaches and spine-leaf network topologies
+
 ## Table of Contents
 1. [Introduction to GPU Clusters](#introduction-to-gpu-clusters)
 2. [Cluster Architecture Principles](#cluster-architecture-principles)

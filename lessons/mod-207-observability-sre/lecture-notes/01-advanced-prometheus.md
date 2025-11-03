@@ -1,5 +1,18 @@
 # Lecture 01: Advanced Prometheus
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design enterprise-grade Prometheus architectures with federation for multi-cluster monitoring aggregating metrics from 100+ clusters to centralized monitoring
+- Implement long-term storage solutions using Thanos or Cortex for multi-year metric retention with downsampling and cost-effective object storage backends
+- Configure high-availability Prometheus deployments with replication, deduplication, and automatic failover ensuring zero data loss and continuous monitoring
+- Master advanced PromQL queries for ML workloads including GPU utilization analysis, training progress tracking, cost attribution, and anomaly detection
+- Design recording rules that pre-compute expensive queries achieving 10-100x speedup for dashboards and reducing query load on Prometheus servers
+- Implement custom exporters for ML-specific metrics including model inference latency, batch job progress, feature store lag, and data pipeline health
+- Optimize Prometheus performance through cardinality management, retention policies, remote write tuning, and query optimization for large-scale deployments
+- Architect production Prometheus systems with proper resource sizing, backup strategies, disaster recovery, and capacity planning for growing metric volumes
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Prometheus Architecture Review](#prometheus-architecture-review)

@@ -1,5 +1,18 @@
 # Lecture 2: Kubernetes Security for ML Workloads
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design secure Kubernetes clusters with RBAC, Pod Security Standards, Network Policies, and admission controllers preventing unauthorized access and malicious workloads
+- Implement pod security contexts with user namespaces, seccomp profiles, AppArmor/SELinux policies, and capability dropping minimizing container privileges
+- Configure network security with NetworkPolicies (Calico/Cilium), service mesh mTLS (Istio), and egress controls restricting pod-to-pod and external communication
+- Architect secrets management integrating External Secrets Operator, Vault, or cloud KMS ensuring secure credential handling without hardcoded secrets
+- Design admission control pipelines using OPA Gatekeeper or Kyverno validating pod specifications, enforcing policies, and mutating resources for security compliance
+- Implement image security with vulnerability scanning (Trivy, Clair), image signing (Cosign), and private registries with access controls
+- Build security monitoring and audit logging using Falco for runtime security, audit logs for API access, and SIEM integration for threat detection
+- Architect multi-tenant Kubernetes security with namespace isolation, resource quotas, RBAC boundaries, and PodSecurityPolicies/Standards ensuring tenant separation
+
 ## Table of Contents
 1. [Introduction to Kubernetes Security](#introduction-to-kubernetes-security)
 2. [Authentication and Identity Management](#authentication-and-identity-management)

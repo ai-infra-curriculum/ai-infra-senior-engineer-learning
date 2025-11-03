@@ -1,11 +1,17 @@
 # Lecture 02: Feature Stores
 
 ## Learning Objectives
-- Understand the purpose and architecture of feature stores
-- Learn to implement feature stores using Feast
-- Explore online vs offline feature serving
-- Master feature engineering pipelines
-- Understand feature reusability and governance
+
+By the end of this lecture, you will be able to:
+
+- Design feature store architectures solving training-serving skew by maintaining identical feature logic for offline training and online inference
+- Implement production feature stores using Feast or Tecton with online serving (Redis/DynamoDB, <10ms latency) and offline serving (S3/BigQuery, batch)
+- Architect feature engineering pipelines with point-in-time correct joins preventing data leakage and maintaining temporal consistency for model training
+- Configure feature materialization strategies including streaming features (Kafka/Flink), batch features (Spark), and on-demand features (real-time computation)
+- Design feature reusability patterns enabling feature sharing across teams, models, and use cases reducing engineering duplication by 60-80%
+- Implement feature governance including feature documentation, lineage tracking, access control, and deprecated feature management
+- Optimize feature serving performance using feature caching, pre-computation, feature sampling, and batch prediction optimization techniques
+- Build feature monitoring systems tracking feature drift, staleness, null rates, and distribution shifts to ensure feature quality in production
 
 ## Overview
 

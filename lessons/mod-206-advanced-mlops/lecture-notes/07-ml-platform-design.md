@@ -1,11 +1,17 @@
 # Lecture 07: ML Platform Design
 
 ## Learning Objectives
-- Understand ML platform architecture patterns
-- Learn to design self-service ML platforms
-- Master platform abstractions and APIs
-- Implement multi-tenancy and governance
-- Build scalable infrastructure for ML teams
+
+By the end of this lecture, you will be able to:
+
+- Design end-to-end ML platforms providing self-service capabilities for data scientists including training orchestration, model deployment, monitoring, and feature stores
+- Architect platform abstraction layers with consistent APIs (Python SDK, REST API, CLI) hiding infrastructure complexity while maintaining flexibility
+- Implement multi-tenancy strategies with resource quotas, namespace isolation, cost allocation, and access control enabling safe team collaboration
+- Design platform services including experiment tracking (MLflow), model registry, feature store (Feast), training orchestration (Kubeflow), and deployment service
+- Configure resource management and autoscaling using Kubernetes node pools, GPU scheduling, spot instance integration, and workload prioritization
+- Build platform observability with centralized logging, metrics dashboards, distributed tracing, and alerting for platform health monitoring
+- Implement governance and compliance controls including model approval workflows, audit trails, data lineage, and policy enforcement (PII handling, bias detection)
+- Architect platform scalability patterns supporting 100s of data scientists, 1000s of models, and diverse workload types (training, batch inference, real-time serving)
 
 ## Overview
 

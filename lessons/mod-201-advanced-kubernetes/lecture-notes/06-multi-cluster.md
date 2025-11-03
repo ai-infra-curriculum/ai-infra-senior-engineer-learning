@@ -1,5 +1,18 @@
 # Lecture 06: Multi-Cluster Architecture
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design multi-cluster architectures for ML platforms including geographic, environment-based, and hybrid patterns
+- Implement cluster federation for unified management of distributed Kubernetes clusters
+- Configure cross-cluster service discovery and load balancing for global ML inference services
+- Design and implement data replication strategies for distributed training and inference workloads
+- Architect multi-cloud and hybrid cloud solutions to avoid vendor lock-in and optimize costs
+- Implement disaster recovery and failover mechanisms for business-critical ML services
+- Optimize costs across multiple clusters using spot instances, reserved capacity, and intelligent workload placement
+- Evaluate trade-offs between single-cluster scaling and multi-cluster distribution for ML workloads
+
 ## Table of Contents
 1. [Introduction to Multi-Cluster](#introduction)
 2. [Multi-Cluster Design Patterns](#design-patterns)

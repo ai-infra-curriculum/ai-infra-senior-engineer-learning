@@ -1,5 +1,18 @@
 # Lecture 04: Quantization Techniques
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design quantization strategies selecting appropriate techniques (PTQ vs QAT, symmetric vs asymmetric, per-tensor vs per-channel) based on accuracy and latency requirements
+- Implement INT8 post-training quantization using multiple calibration methods (entropy, percentile, minmax) with 500-1000 representative samples achieving <2% accuracy degradation
+- Architect quantization-aware training pipelines with fake quantization, straight-through estimators, and proper training schedules (fine-tune, freeze BN, freeze ranges)
+- Apply advanced quantization formats including FP16/BF16 mixed precision, FP8 for Hopper GPUs, and INT4 using GPTQ/AWQ for LLM weight compression
+- Implement accuracy preservation techniques including per-channel weight quantization, cross-layer equalization, bias correction, and outlier channel handling
+- Configure quantization across multiple frameworks (PyTorch native, TensorRT, ONNX Runtime) with appropriate settings for static, dynamic, and QAT workflows
+- Evaluate quantization trade-offs analyzing memory reduction (2x for FP16, 4x for INT8, 8x for INT4), compute speedup, and accuracy impact per layer
+- Deploy quantized models to production with comprehensive validation (accuracy comparison, output similarity, numerical stability), A/B testing, and continuous monitoring
+
 ## Table of Contents
 1. [Introduction to Quantization](#introduction)
 2. [Quantization Fundamentals](#fundamentals)

@@ -1,11 +1,17 @@
 # Lecture 03: Model Registry and Versioning
 
 ## Learning Objectives
-- Understand the purpose and architecture of model registries
-- Master MLflow Model Registry for production ML
-- Learn model versioning strategies and lifecycle management
-- Implement model lineage tracking
-- Understand model promotion workflows
+
+By the end of this lecture, you will be able to:
+
+- Design centralized model registries using MLflow, Neptune, or cloud-native solutions providing unified model catalog with versioning, metadata, and lifecycle management
+- Implement semantic versioning strategies for ML models (major.minor.patch) with automated version bumping based on data changes, architecture updates, or hyperparameter modifications
+- Architect model lifecycle management workflows with stages (Development, Staging, Production, Archived) and automated promotion rules based on performance metrics
+- Configure model lineage tracking capturing complete model provenance including training data, code version, hyperparameters, dependencies, and parent models
+- Design model metadata schemas storing essential information (training metrics, feature importance, model signatures, performance benchmarks, compliance certifications)
+- Implement model promotion workflows with approval processes, A/B test requirements, performance thresholds, and automated rollback capabilities
+- Build model reproducibility systems enabling exact model recreation from registry metadata including environment snapshots and deterministic training pipelines
+- Architect model governance controls with access policies, audit logs, compliance validation, and automated retirement of outdated models
 
 ## Overview
 

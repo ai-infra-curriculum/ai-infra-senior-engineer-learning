@@ -1,5 +1,18 @@
 # Lecture 04: ML-Specific Observability
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design ML observability systems monitoring model quality metrics (accuracy, precision, recall, AUC) in production using ground truth labels when available
+- Implement data drift detection using statistical tests (KS test, PSI, Wasserstein distance) alerting when input distributions diverge from training data
+- Configure model drift detection monitoring prediction distributions, confidence scores, and surrogate metrics detecting model degradation without labels
+- Build feature store observability tracking feature staleness, null rates, outliers, and distribution shifts ensuring feature quality for inference
+- Design training observability systems monitoring loss curves, gradient norms, GPU utilization, and data loading bottlenecks for large-scale training jobs
+- Implement inference observability tracking latency percentiles (p50/p95/p99), throughput, batch size utilization, and model serving resource efficiency
+- Architect ML metrics collection pipelines using custom Prometheus exporters, log-based metrics, and specialized ML monitoring tools (Evidently, WhyLabs)
+- Build automated remediation workflows triggered by observability alerts including model retraining, automatic rollback, and circuit breaker activation
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Model Performance Monitoring](#model-performance-monitoring)

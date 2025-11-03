@@ -1,5 +1,18 @@
 # Lecture 02: GPU Architecture Deep Dive
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Architect ML workloads that leverage GPU architectural features including Streaming Multiprocessors, Tensor Cores, and memory hierarchies for optimal performance
+- Design memory access patterns that exploit the multi-level GPU memory hierarchy (registers, shared memory, L1/L2 cache, HBM) to minimize memory latency
+- Evaluate GPU selection criteria based on architectural differences between NVIDIA GPU generations (Volta, Turing, Ampere, Hopper, Blackwell) for specific ML workloads
+- Implement Tensor Core utilization strategies in deep learning models to achieve 2-10x speedups through mixed precision training
+- Configure warp scheduling and occupancy parameters to balance SM utilization, register pressure, and memory bandwidth for different kernel types
+- Analyze roofline models to identify whether ML workloads are compute-bound or memory-bound and apply appropriate optimization strategies
+- Design training pipelines that account for PCIe bandwidth limitations between CPU and GPU memory to minimize data transfer bottlenecks
+- Troubleshoot common GPU architecture-related performance issues including warp divergence, bank conflicts, and insufficient occupancy
+
 ## Table of Contents
 1. [Introduction to GPU Architecture](#introduction-to-gpu-architecture)
 2. [GPU vs CPU Architecture](#gpu-vs-cpu-architecture)

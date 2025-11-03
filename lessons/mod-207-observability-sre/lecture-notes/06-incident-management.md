@@ -1,11 +1,19 @@
 # Lecture 06: Incident Management for ML Systems
 
 ## Learning Objectives
-- Understand incident management lifecycle
-- Learn incident response procedures for ML systems
-- Master on-call practices and escalation
-- Conduct effective postmortems
-- Build incident response playbooks
+
+By the end of this lecture, you will be able to:
+
+- Design incident management processes for ML systems covering detection (alerting), response (on-call), resolution (mitigation), and analysis (postmortem)
+- Implement incident response procedures with clear roles (incident commander, communications lead, technical lead), escalation paths, and runbooks for common ML issues
+- Configure on-call rotations with appropriate coverage (24/7, follow-the-sun), alert routing, and escalation policies ensuring timely response to production incidents
+- Conduct blameless postmortems analyzing root causes, contributing factors, and corrective actions focusing on system improvements rather than individual blame
+- Build incident response playbooks for common ML issues (model degradation, data drift, prediction failures, latency spikes) with step-by-step resolution procedures
+- Design incident severity classification (P0-P4) with clear criteria, response times, and notification requirements appropriate for ML system impact
+- Implement incident tracking and metrics measuring MTTD (mean time to detect), MTTR (mean time to resolution), and incident frequency for continuous improvement
+- Architect incident prevention systems using chaos engineering, pre-incident reviews, deployment validation, and proactive monitoring to reduce incident occurrence
+
+## Overview
 
 ## Overview
 

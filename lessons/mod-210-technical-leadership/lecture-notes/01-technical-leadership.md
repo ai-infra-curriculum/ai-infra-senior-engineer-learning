@@ -1,5 +1,18 @@
 # Lecture 1: Technical Leadership Principles
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Define technical leadership distinguishing influence-based guidance from formal authority establishing vision direction accountability for senior roles
+- Design leadership approaches matching authority and expertise levels applying situational leadership frameworks for different team maturity contexts
+- Build technical influence through expertise relationships communication establishing credibility via consistent delivery knowledge sharing problem-solving capabilities
+- Navigate leadership vs management distinctions understanding when to inspire change vs maintain stability choosing appropriate approaches
+- Implement decision-making frameworks using structured processes avoiding cognitive biases evaluating options systematically with clear criteria
+- Develop emotional intelligence recognizing self-awareness empathy relationship management skills enabling effective collaboration trust building
+- Lead technical initiatives defining clear vision empowering teams maintaining momentum managing stakeholders from conception through completion
+- Address common leadership challenges balancing technical debt influencing peers managing disagreement overcoming imposter syndrome with strategic approaches
+
 ## Table of Contents
 1. [What is Technical Leadership?](#what-is-technical-leadership)
 2. [Leadership vs Management](#leadership-vs-management)

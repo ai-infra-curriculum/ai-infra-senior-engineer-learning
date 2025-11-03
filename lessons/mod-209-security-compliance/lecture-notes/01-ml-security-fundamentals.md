@@ -1,5 +1,18 @@
 # Lecture 1: ML Security Fundamentals
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design ML security architectures addressing unique ML threats including model poisoning, adversarial attacks, data poisoning, and model extraction
+- Implement secure ML pipelines with input validation, output sanitization, access controls, and audit logging throughout training and inference workflows
+- Architect model security controls including model signing, version control, access policies, and provenance tracking preventing unauthorized model modifications
+- Configure data security for ML including encryption at rest/transit, data access auditing, PII detection, and secure data pipeline design
+- Design infrastructure security for ML systems with container security, GPU isolation, network segmentation, and secure compute resource management
+- Implement supply chain security validating dependencies, scanning containers for vulnerabilities, and using trusted base images for ML workloads
+- Build security monitoring systems detecting anomalous model behavior, unauthorized access attempts, data exfiltration, and adversarial attack patterns
+- Architect defense-in-depth strategies with multiple security layers (network, application, data, model) ensuring comprehensive ML system protection
+
 ## Table of Contents
 1. [Introduction to ML Security](#introduction-to-ml-security)
 2. [Threat Modeling for ML Systems](#threat-modeling-for-ml-systems)

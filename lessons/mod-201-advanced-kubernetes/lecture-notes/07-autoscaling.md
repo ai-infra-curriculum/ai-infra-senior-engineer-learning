@@ -1,5 +1,18 @@
 # Lecture 07: Autoscaling Strategies
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and implement Horizontal Pod Autoscaler (HPA) configurations for ML inference services with custom metrics
+- Configure Vertical Pod Autoscaler (VPA) for optimal resource allocation in training and serving workloads
+- Implement Cluster Autoscaler for dynamic node scaling based on workload demands
+- Design custom metrics autoscaling using Prometheus, application metrics, and business KPIs
+- Implement event-driven autoscaling (KEDA) for queue-based ML processing pipelines
+- Configure cost-aware autoscaling strategies using spot instances and intelligent workload placement
+- Design autoscaling policies specific to ML workloads including GPU-based scaling and batch job optimization
+- Troubleshoot autoscaling issues including flapping, slow scale-up, and resource quota limits
+
 ## Table of Contents
 1. [Introduction to Autoscaling](#introduction)
 2. [Horizontal Pod Autoscaler (HPA)](#hpa)

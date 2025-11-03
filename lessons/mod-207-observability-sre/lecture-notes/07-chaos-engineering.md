@@ -1,11 +1,19 @@
 # Lecture 07: Chaos Engineering for ML Systems
 
 ## Learning Objectives
-- Understand chaos engineering principles
-- Learn to design chaos experiments for ML systems
-- Master fault injection techniques
-- Build resilience through controlled failures
-- Implement chaos engineering practices
+
+By the end of this lecture, you will be able to:
+
+- Design chaos experiments for ML systems testing resilience to model failures, data quality issues, infrastructure outages, and latency spikes
+- Implement fault injection techniques using tools like Chaos Monkey, Litmus Chaos, or custom scripts simulating realistic production failures with controlled blast radius
+- Architect steady-state hypothesis definitions for ML services establishing expected behavior (availability, latency, correctness) that should persist during chaos experiments
+- Configure automated chaos engineering pipelines with scheduled experiments, automated rollback, and continuous validation integrated into CI/CD workflows
+- Design ML-specific chaos scenarios including model serving failures, feature store outages, batch job interruptions, and data pipeline degradation
+- Implement resilience patterns validated through chaos including circuit breakers, fallback models, graceful degradation, and automatic retry mechanisms
+- Build game day exercises running large-scale chaos experiments in production with full incident response simulation and team coordination
+- Analyze chaos experiment results identifying weaknesses in system design, monitoring gaps, and operational procedures enabling proactive reliability improvements
+
+## Overview
 
 ## Overview
 

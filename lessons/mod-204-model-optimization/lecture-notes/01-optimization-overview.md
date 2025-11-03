@@ -1,5 +1,18 @@
 # Lecture 01: Model Optimization Overview
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design systematic model optimization strategies that balance latency, throughput, memory, and accuracy requirements for production ML deployments
+- Architect optimization workflows that systematically identify bottlenecks through profiling and apply appropriate techniques (quantization, pruning, compilation) incrementally
+- Evaluate trade-offs between optimization approaches (conservative vs aggressive) based on use case requirements and acceptable accuracy degradation thresholds
+- Implement comprehensive performance measurement frameworks that track latency percentiles, throughput metrics, GPU utilization, and cost per query
+- Configure hardware-specific optimizations leveraging Tensor Cores, specialized accelerators, and execution providers for different deployment targets (NVIDIA, AMD, TPU, edge)
+- Apply the complete optimization taxonomy to select appropriate techniques based on identified bottlenecks (memory-bound, compute-bound, latency-bound, cost-bound)
+- Benchmark optimized models under realistic load conditions and generate detailed performance reports comparing baseline vs optimized metrics
+- Design production optimization pipelines with proper validation, A/B testing, monitoring, and rollback mechanisms to ensure quality and reliability
+
 ## Table of Contents
 1. [Introduction to Model Optimization](#introduction)
 2. [Why Optimization Matters](#why-optimization-matters)

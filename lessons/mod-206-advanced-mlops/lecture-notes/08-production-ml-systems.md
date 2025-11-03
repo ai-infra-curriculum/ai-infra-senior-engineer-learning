@@ -1,11 +1,17 @@
 # Lecture 08: Production ML Systems
 
 ## Learning Objectives
-- Understand production ML system architecture
-- Master reliability and fault tolerance patterns
-- Learn production debugging and troubleshooting
-- Implement model retraining strategies
-- Handle production incidents effectively
+
+By the end of this lecture, you will be able to:
+
+- Design production ML architectures with proper separation of concerns including feature service, prediction service, model registry, and monitoring systems
+- Implement reliability patterns including circuit breakers, retries with exponential backoff, fallback models, and graceful degradation for fault tolerance
+- Architect model retraining strategies using scheduled retraining, trigger-based retraining (drift detection), and continuous training with online learning
+- Configure production monitoring tracking model performance metrics, system health (latency/throughput/errors), data quality, and business impact
+- Design debugging workflows for production ML issues using logging, profiling, A/B test analysis, and feature attribution to identify root causes
+- Implement incident response procedures with runbooks, escalation paths, automated rollback, and post-incident reviews for continuous improvement
+- Build model versioning and rollback capabilities enabling instant revert to previous stable version with proper traffic management and state consistency
+- Architect data validation and quality checks preventing bad data from reaching models using schema validation, statistical tests, and anomaly detection
 
 ## Overview
 

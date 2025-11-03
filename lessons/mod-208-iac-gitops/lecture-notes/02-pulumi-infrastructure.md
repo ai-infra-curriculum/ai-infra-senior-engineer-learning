@@ -1,5 +1,18 @@
 # Lecture 2: Pulumi Infrastructure
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design infrastructure-as-code solutions using Pulumi with Python, TypeScript, or Go leveraging programming language features (loops, conditionals, functions) for dynamic infrastructure
+- Architect Pulumi stack management strategies organizing environments (dev/staging/prod) with shared components, stack references, and configuration management
+- Implement ML infrastructure with Pulumi provisioning GPU clusters, managed ML services (SageMaker, Vertex AI), and data pipelines using cloud-native providers
+- Configure Pulumi automation API building self-service infrastructure platforms enabling developers to provision resources programmatically via REST APIs
+- Design component resources creating reusable infrastructure abstractions (ML training cluster, model serving endpoint) with encapsulated logic and validation
+- Implement Pulumi testing strategies using unit tests, integration tests, and policy tests validating infrastructure code before deployment
+- Architect multi-cloud Pulumi programs using provider abstractions deploying identical infrastructure patterns across AWS, GCP, and Azure
+- Build CI/CD pipelines for Pulumi with automated previews, approval workflows, state management, and rollback capabilities for production infrastructure changes
+
 ## Table of Contents
 1. [Pulumi Fundamentals](#pulumi-fundamentals)
 2. [Language Support](#language-support)

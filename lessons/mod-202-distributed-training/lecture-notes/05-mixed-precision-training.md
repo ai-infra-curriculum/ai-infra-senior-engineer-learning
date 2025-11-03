@@ -1,5 +1,18 @@
 # Lecture 05: Mixed Precision Training
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design mixed precision training strategies using FP16, BF16, and FP32 to optimize memory usage, training speed, and numerical stability
+- Implement PyTorch Automatic Mixed Precision (AMP) with gradient scaling for production training pipelines
+- Configure and tune dynamic loss scaling strategies to prevent gradient underflow and numerical instability in FP16 training
+- Evaluate trade-offs between FP16 and BF16 precision formats based on hardware capabilities, model architecture, and numerical requirements
+- Implement gradient scaling, loss scaling, and master weight management for stable mixed precision training
+- Identify and handle operations requiring FP32 precision (LayerNorm, Softmax, loss computation) to maintain training stability
+- Benchmark and measure memory savings (25%) and speedup (2-3x) from mixed precision training on different GPU architectures
+- Troubleshoot common mixed precision issues including NaN/Inf gradients, scale factor degradation, and convergence problems
+
 ## Table of Contents
 
 1. [Introduction to Mixed Precision](#introduction)

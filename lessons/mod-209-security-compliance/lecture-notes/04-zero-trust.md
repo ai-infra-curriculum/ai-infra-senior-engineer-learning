@@ -1,5 +1,18 @@
 # Lecture 4: Zero-Trust Architecture for ML Systems
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design zero-trust ML architectures with "never trust, always verify" principle eliminating implicit trust and requiring continuous authentication/authorization
+- Implement identity-based access control using service identities (SPIFFE/SPIRE), workload identity, and strong authentication (mTLS, OAuth2/OIDC)
+- Architect micro-segmentation strategies with network policies, service mesh authorization, and application-level access controls limiting lateral movement
+- Configure continuous verification with policy-based authorization, context-aware access decisions, and real-time risk assessment for every request
+- Design device trust and posture checking validating device compliance, security patching, and configuration before granting access to ML systems
+- Implement least-privilege access with just-in-time (JIT) access, temporary credentials, and automatic expiration minimizing standing privileges
+- Build zero-trust network architecture with service mesh (Istio), API gateways, and encrypted communication channels eliminating network-based trust
+- Architect monitoring and analytics for zero-trust detecting anomalous access patterns, policy violations, and potential security breaches in real-time
+
 ## Table of Contents
 1. [Introduction to Zero-Trust](#introduction-to-zero-trust)
 2. [Zero-Trust Principles](#zero-trust-principles)

@@ -1,5 +1,18 @@
 # Lecture 07: Performance Optimization for Distributed Training
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and implement systematic performance profiling strategies using PyTorch Profiler and NVIDIA Nsight to identify distributed training bottlenecks
+- Analyze and decompose training performance into components (data loading, forward pass, backward pass, communication, optimizer) to identify bottlenecks
+- Implement communication optimizations including gradient compression, gradient accumulation, and NCCL tuning to reduce communication overhead
+- Apply memory optimization techniques including gradient checkpointing, ZeRO optimizer stages, and memory-efficient data structures for large models
+- Optimize data loading pipelines with prefetching, pinned memory, persistent workers, and GPU-aware data loaders to eliminate I/O bottlenecks
+- Implement computation optimizations including mixed precision training, torch.compile, operation fusion, and cudnn tuning
+- Evaluate trade-offs between communication frequency, batch size, memory usage, and training throughput in distributed settings
+- Design end-to-end optimization strategies that systematically address bottlenecks and achieve high GPU utilization and scaling efficiency
+
 ## Table of Contents
 
 1. [Introduction to Performance Optimization](#introduction)

@@ -1,5 +1,18 @@
 # Lecture 4: ArgoCD Deployment
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design ArgoCD architectures for GitOps continuous delivery automatically synchronizing Kubernetes application state from Git repositories with live cluster state
+- Implement ArgoCD application deployment patterns using Helm charts, Kustomize overlays, and plain manifests with automated sync policies and health checks
+- Configure sync strategies including manual sync, automated sync, self-heal (auto-fix drift), and prune (remove orphaned resources) based on application requirements
+- Architect multi-cluster management with ArgoCD managing 100+ Kubernetes clusters from centralized control plane with RBAC and namespace isolation
+- Design ML model deployment workflows using ArgoCD for canary deployments, blue-green deployments, and progressive delivery of ML models
+- Implement ApplicationSets for multi-environment deployments generating applications dynamically from Git directory structure, cluster list, or pull request generators
+- Configure ArgoCD notifications with webhooks, Slack, email alerting on sync failures, degraded applications, and deployment events
+- Build GitOps workflows with branch-based environments, pull request previews, and automated promotion pipelines for production ML deployments
+
 ## Table of Contents
 1. [ArgoCD Architecture](#argocd-architecture)
 2. [Installation and Setup](#installation-and-setup)

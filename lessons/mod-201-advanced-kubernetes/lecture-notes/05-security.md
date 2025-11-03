@@ -1,5 +1,18 @@
 # Lecture 05: Kubernetes Security Best Practices
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design and implement comprehensive RBAC policies for multi-tenant ML platforms with principle of least privilege
+- Configure Pod Security Standards (PSS) and Pod Security Admission to enforce security baselines
+- Implement network policies for zero-trust networking and microsegmentation of ML workloads
+- Manage secrets securely using Kubernetes Secrets, external secret managers, and encryption at rest
+- Conduct security scanning and vulnerability assessment for container images and dependencies
+- Implement runtime security monitoring and anomaly detection for ML workloads
+- Design audit logging and compliance frameworks for regulated ML environments
+- Evaluate and mitigate security risks specific to ML infrastructure including model theft and data exfiltration
+
 ## Table of Contents
 1. [Security Principles for ML Infrastructure](#principles)
 2. [Role-Based Access Control (RBAC)](#rbac)

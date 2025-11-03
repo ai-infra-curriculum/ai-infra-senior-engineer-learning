@@ -1,11 +1,17 @@
 # Lecture 05: SLI, SLO, and SLA for ML Systems
 
 ## Learning Objectives
-- Understand Service Level Indicators (SLIs) for ML systems
-- Define effective Service Level Objectives (SLOs)
-- Create Service Level Agreements (SLAs) for ML services
-- Implement SLO monitoring and alerting
-- Balance reliability with development velocity
+
+By the end of this lecture, you will be able to:
+
+- Design Service Level Indicators (SLIs) for ML systems measuring availability (99.9%), latency (p95 <100ms), correctness (accuracy), and freshness
+- Define Service Level Objectives (SLOs) balancing reliability targets with development velocity using error budgets (e.g., 99.9% availability = 43 minutes downtime/month)
+- Create Service Level Agreements (SLAs) for ML services with customer commitments, penalties, and exclusions for external dependencies
+- Implement SLO monitoring and alerting with burn rate alerts detecting fast and slow SLO consumption triggering appropriate urgency responses
+- Calculate and manage error budgets allocating reliability buffer for deployments, experiments, and infrastructure changes without exceeding SLO targets
+- Design multi-window burn rate alerts (1h, 6h, 24h, 3d) providing early warning of SLO violations with appropriate notification thresholds
+- Build SLO dashboards visualizing current SLO compliance, remaining error budget, historical trends, and burn rate enabling data-driven operational decisions
+- Architect reliability practices balancing innovation speed with system stability using SLOs to inform deployment policies, testing requirements, and incident priorities
 
 ## Overview
 

@@ -1,5 +1,18 @@
 # Lecture 07: Continuous Batching and KV Cache Management
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design iteration-level scheduling systems for continuous batching that dynamically admit new requests, generate tokens for running requests, and remove finished requests achieving near 100% GPU utilization
+- Implement block-based KV cache management with memory pooling that allocates/frees fixed-size blocks dynamically avoiding memory fragmentation and enabling efficient memory sharing
+- Architect PagedAttention CUDA kernels that compute attention correctly over non-contiguous memory blocks with block-level parallelism, warp-level softmax, and optimized memory access patterns
+- Configure request scheduling algorithms (FCFS, Shortest-Job-First, priority-based) that balance latency, throughput, and fairness while preventing head-of-line blocking and starvation
+- Implement preemption mechanisms that swap low-priority requests to CPU or recompute from prompt when memory pressure occurs enabling graceful handling of memory exhaustion
+- Design admission control policies that evaluate available memory, current batch size, and request priority to determine when to admit new requests vs queue/preempt existing ones
+- Optimize continuous batching performance through adaptive batch size tuning, dynamic block size adjustment based on workload analysis, and comprehensive metrics tracking
+- Build complete production continuous batching engines integrating scheduling, memory management, preemption, and monitoring achieving 2-10x throughput improvement over static batching
+
 ## Table of Contents
 1. [Introduction to Continuous Batching](#introduction)
 2. [Traditional vs Continuous Batching](#traditional-vs-continuous)

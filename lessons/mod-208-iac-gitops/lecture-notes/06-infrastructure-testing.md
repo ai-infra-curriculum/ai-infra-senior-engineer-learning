@@ -1,5 +1,18 @@
 # Lecture 6: Infrastructure Testing
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design infrastructure testing strategies following testing pyramid with unit tests (syntax validation), integration tests (actual deployment), and contract tests (API compatibility)
+- Implement Terratest framework for automated Terraform testing deploying real infrastructure, running validation checks, and cleaning up resources in isolated environments
+- Configure Kitchen-Terraform for test-driven infrastructure development using Test Kitchen's workflow for creating, converging, verifying, and destroying infrastructure
+- Architect policy testing using Open Policy Agent (OPA) or Sentinel validating infrastructure configurations against security, compliance, and best practice policies before deployment
+- Design contract testing for infrastructure APIs ensuring module interfaces remain stable, preventing breaking changes, and validating module outputs
+- Build CI/CD pipelines for infrastructure with automated testing, static analysis (tflint, checkov), security scanning, and cost estimation before production deployment
+- Implement chaos testing for infrastructure using failure injection validating resilience, testing disaster recovery procedures, and ensuring proper fault handling
+- Architect infrastructure test environments with ephemeral test accounts, isolated VPCs, and automated cleanup preventing test pollution and managing test costs
+
 ## Table of Contents
 1. [Why Test Infrastructure?](#why-test-infrastructure)
 2. [Terratest Framework](#terratest-framework)

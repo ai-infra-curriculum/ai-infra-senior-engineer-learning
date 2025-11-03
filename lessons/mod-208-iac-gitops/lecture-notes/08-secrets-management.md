@@ -1,5 +1,18 @@
 # Lecture 8: Secrets Management
 
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- Design secrets management architectures using HashiCorp Vault, AWS Secrets Manager, or Google Secret Manager providing centralized, audited, encrypted secrets storage
+- Implement SOPS (Secrets OPerationS) for GitOps-friendly secrets encryption enabling secrets-in-Git workflows with KMS-encrypted files and granular access control
+- Configure Sealed Secrets for Kubernetes encrypting secrets at rest in Git repositories with cluster-side decryption enabling GitOps secret management
+- Architect External Secrets Operator integration synchronizing secrets from external secret stores (Vault, AWS, GCP) into Kubernetes Secrets with automatic rotation
+- Design ML credential management strategies for model registry access, cloud credentials, database passwords, and API keys with least-privilege access and rotation policies
+- Implement secrets rotation workflows with automated rotation schedules, zero-downtime updates, and application-level secret reloading without service restarts
+- Build secrets injection patterns using Vault Agent, init containers, or CSI drivers providing secrets to applications without hardcoding in manifests or environment variables
+- Architect secrets audit and compliance systems with access logging, secret usage tracking, compliance reporting, and anomaly detection for unauthorized access
+
 ## Table of Contents
 1. [Secrets Management Challenges](#secrets-management-challenges)
 2. [HashiCorp Vault](#hashicorp-vault)
