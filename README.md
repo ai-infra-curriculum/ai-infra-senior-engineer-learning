@@ -839,3 +839,9 @@ A: The AI Infrastructure Architect curriculum (coming soon) or specialized roles
 ---
 
 **Ready to level up? Start with [Module 201: Advanced Kubernetes](lessons/mod-201-advanced-kubernetes/README.md)!**
+
+
+---
+
+<!-- aicg:maintained-by -->
+Maintained by [VeriSwarm.ai](https://veriswarm.ai)
