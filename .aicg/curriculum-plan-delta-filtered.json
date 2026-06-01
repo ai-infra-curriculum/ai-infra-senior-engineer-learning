@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "role_id": "senior-engineer",
+  "month": "2026-06",
+  "rationale": "Three concrete shifts in Senior AI Infrastructure Engineer postings observed during 2026-03-01 to 2026-06-01 drive these additive proposals. (1) LLM-as-judge has crossed from research curiosity to production CI gate: postings from Reddit, Airbnb, Zoom, GE Vernova, and Affinity now ask for evaluation pipelines, calibration vs human labels, and regression-on-merge \u2014 none of which is covered in the current mod-206 syllabus that stops at MLflow/drift detection. (2) Agentic systems infrastructure has matured into a distinct line item with Temporal, multi-agent coordination, and AIOps-style auto-remediation appearing as senior-level requirements at Scale AI Enterprise (2026-06-01), Justworks (2026-06-01), Synthesia (2026-05), Affinity (2026-06-01), Airbnb (2026-05), and Recursion (2026-05) \u2014 current curriculum has no module that owns the operational concerns of agents in production (durable workflows, state management, tool invocation reliability, observability over agent traces). (3) HPC/Slurm has not gone away \u2014 postings from Wex (2026-02-12), Centific (2026-05), Perplexity (2026-04-07), and Cedana (2026-04) all explicitly require Slurm administration and Slurm/K8s bridging (Kueue, multi-cluster Slurm federation); mod-201 covers gang scheduling and K8s-native batch but does not address Slurm interop, which is now table-stakes for any AI infra role that touches large training clusters. All three additions are strictly additive, target clear gaps the senior level genuinely owns, and each is backed by 3+ distinct in-window postings. Items found in postings but already covered (vLLM/KV cache in mod-204, MIG/DCGM in mod-203, ArgoCD in mod-208, multi-cloud IaC in mod-205/208) are NOT proposed. Items that belong at a different level per the ownership rule (LLM/AI security \u2192 ai-infra-security-learning; HPC networking depth \u2192 ai-infra-performance-learning; vector DBs and prompt engineering \u2192 ai-infra-engineer-learning module 10) are NOT proposed here; JOB_REQUIREMENTS.md links to those owners instead.",
+  "modules": [
+    {
+      "id": "mod-211-agentic-systems-infra",
+      "title": "Agentic Systems Infrastructure in Production",
+      "description": "Build and operate the infrastructure that runs LLM agents in production: durable workflow engines (Temporal), multi-agent coordination patterns, agent state management, tool invocation reliability, observability over agent traces, and AIOps-style use of agents to reduce infra toil. Covers failure modes specific to agentic systems (infinite loops, tool-call thrash, cost explosions, prompt-injected control flow) and how to instrument and bound them with the same SRE discipline already covered for traditional services in mod-207. Estimated 35 hours: 12h lectures + 18h labs + 5h review. Prerequisites: mod-206 (Advanced MLOps), mod-207 (Observability & SRE), and basic familiarity with LLM application patterns from the engineer-level LLM Infrastructure module.",
+      "exercises": [
+        "exercise-01-durable-agent-workflow-temporal",
+        "exercise-02-multi-agent-coordination-patterns",
+        "exercise-03-agent-trace-observability",
+        "exercise-04-cost-and-loop-guardrails",
+        "exercise-05-aiops-auto-remediation-agent"
+      ],
+      "rationale": "Six in-window senior-level postings (Scale AI Enterprise 2026-06-01, Justworks 2026-06-01, Synthesia 2026-05, Affinity 2026-06-01, Airbnb 2026-05, Recursion 2026-05) explicitly require building agentic AI infrastructure in production. The requirements span durable workflow engines (Temporal explicitly named), multi-agent coordination, agent observability, and agentic remediation of ops toil \u2014 none of these is covered by any existing module 201-210. The peer-level ML Platform and MLOps tracks own model-side concerns (fine-tuning, registries) but do not own the production runtime/orchestration concerns for agent systems, which are a Senior AI Infrastructure Engineer responsibility. Covers requirements req-agentic-workflow-infra, req-agentic-systems-ops-automation, and req-temporal-workflow-orchestration from job-requirements.json.",
+      "evidence": [
+        {
+          "employer": "Scale AI",
+          "title": "Staff Infrastructure Software Engineer, Enterprise AI",
+          "url": "https://scale.com/careers/4599700005",
+          "date_observed": "2026-06-01",
+          "quote": "Establish architectural patterns for secure, scalable agentic workflows"
+        },
+        {
+          "employer": "Justworks",
+          "title": "Senior IT Systems Engineer, AI",
+          "url": "https://job-boards.greenhouse.io/justworks/jobs/7743119",
+          "date_observed": "2026-06-01",
+          "quote": "Hands-on experience with AI workflow orchestration tools (e.g., LangChain, Airflow, Prefect, or similar)"
+        },
+        {
+          "employer": "Synthesia",
+          "title": "Senior ML Platform Engineer",
+          "url": "https://remotive.com/remote/jobs/ai-ml/senior-ml-platform-engineer-4295826",
+          "date_observed": "2026-05-01",
+          "quote": "Create agentic systems reducing operational overhead ... Temporal workflow orchestration ... developer-facing tooling"
+        },
+        {
+          "employer": "Affinity.co",
+          "title": "Senior AI Engineer, AI Platform",
+          "url": "https://job-boards.greenhouse.io/affinity/jobs/7664593003",
+          "date_observed": "2026-06-01",
+          "quote": "Design multi-agent LLM systems ... Agent-based AI applications"
+        },
+        {
+          "employer": "Airbnb",
+          "title": "Senior Staff Machine Learning Engineer, Data & Eval",
+          "url": "https://careers.airbnb.com/positions/6757302/",
+          "date_observed": "2026-05-01",
+          "quote": "Experience building robust evaluation platforms for agent behavior validation, safety/guardrails, and continuous improvement"
+        },
+        {
+          "employer": "Recursion",
+          "title": "Senior AI Engineer",
+          "url": "https://job-boards.greenhouse.io/recursionpharmaceuticals/jobs/7516824",
+          "date_observed": "2026-05-01",
+          "quote": "Architecting and implementing complex, multi-agent orchestration frameworks and sophisticated AI Agents that autonomously handle business and scientific workflows"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "module_id": "mod-206-advanced-mlops",
+      "exercise": {
+        "slug": "exercise-09-llm-eval-pipeline",
+        "title": "LLM Evaluation Infrastructure as a CI/CD Gate",
+        "summary": "Build a production-grade LLM evaluation pipeline that gates model and prompt deployments. Implement LLM-as-judge with calibration against a human-labeled golden set, RAGAS-style RAG quality metrics (faithfulness, context precision/recall, answer relevance), regression-on-merge that blocks promotion when a new prompt or model degrades evals beyond a threshold, and nightly regression sweeps with alert routing. Integrate with the existing mod-206 MLflow registry and mod-208 GitOps pipeline so that eval verdicts become a first-class promotion gate alongside accuracy and drift checks. Compare scoring with a frontier judge model vs a smaller open-weights judge; report calibration drift over time."
+      },
+      "evidence": [
+        {
+          "employer": "Airbnb",
+          "title": "Senior Staff Machine Learning Engineer, Data & Eval",
+          "url": "https://careers.airbnb.com/positions/6757302/",
+          "date_observed": "2026-05-01",
+          "quote": "LLM evaluation and testing automation, feedback-based learning, and guardrails ... Experience building robust evaluation platforms for agent behavior validation, safety/guardrails, and continuous improvement"
+        },
+        {
+          "employer": "Reddit",
+          "title": "Staff Machine Learning Engineer - GenAI Platform",
+          "url": "https://www.workingnomads.com/jobs/staff-machine-learning-engineer-genai-platform-reddit",
+          "date_observed": "2026-05-01",
+          "quote": "Develop evaluation and benchmarking infrastructure"
+        },
+        {
+          "employer": "Zoom",
+          "title": "Machine Learning Engineer, Responsible AI",
+          "url": "https://careers.zoom.us/jobs/machine-learning-engineer-responsible-ai-seattle-washington-united-states",
+          "date_observed": "2026-05-01",
+          "quote": "Deep understanding of the LLM lifecycle and the unique challenges of evaluating non-deterministic systems (Quality, Safety, and Alignment)"
+        },
+        {
+          "employer": "GE Vernova",
+          "title": "Senior Software Engineer - Python, LLM, GenAI",
+          "url": "https://careers.gevernova.com/senior-software-engineer-python-llm-genai/job/R5033461",
+          "date_observed": "2026-05-01",
+          "quote": "Proven ability to design and implement LLM validation frameworks, evaluation methodologies, guardrails, and prompt governance pipelines to ensure reliability, accuracy, and compliance"
+        },
+        {
+          "employer": "Affinity.co",
+          "title": "Senior AI Engineer, AI Platform",
+          "url": "https://job-boards.greenhouse.io/affinity/jobs/7664593003",
+          "date_observed": "2026-06-01",
+          "quote": "Hands on experiences with model evaluation metrics (e.g. perplexity, hallucination rate)"
+        }
+      ]
+    },
+    {
+      "module_id": "mod-201-advanced-kubernetes",
+      "exercise": {
+        "slug": "exercise-09-slurm-kueue-bridge",
+        "title": "HPC \u2194 Kubernetes: Slurm Administration, Kueue, and the Bridge",
+        "summary": "Stand up a small Slurm cluster (3 nodes) with GPU resources via gres, configure fairshare and a QOS policy, then layer Kueue (the CNCF Kubernetes-native batch queueing project) on a parallel K8s cluster. Implement a Slurm/K8s bridge that lets a single job submission system route training jobs to whichever backend has capacity, with consistent quotas across both. Cover prolog/epilog hooks for GPU health checking, gang scheduling parity between Slurm srun and Kueue ClusterQueues, and a single Prometheus dashboard that surfaces job state across both backends. The exercise should make the student fluent in why large AI labs still run Slurm alongside K8s and how to make the two cooperate."
+      },
+      "evidence": [
+        {
+          "employer": "Wex",
+          "title": "Senior AI Infrastructure Engineer",
+          "url": "https://careers.massfintechhub.com/companies/wex/jobs/67502521-senior-ai-infrastructure-engineer",
+          "date_observed": "2026-02-12",
+          "quote": "Ray or Slurm experience (preferred)"
+        },
+        {
+          "employer": "Centific",
+          "title": "ML Ops Infrastructure Engineer",
+          "url": "https://remotive.com/remote/jobs/ai-ml/ml-ops-infrastructure-engineer-4265185",
+          "date_observed": "2026-05-01",
+          "quote": "Production-level Kubernetes administration experience on bare-metal ... NVIDIA DGX Systems, BasePOD ... Edge Kubernetes deployment"
+        },
+        {
+          "employer": "Perplexity",
+          "title": "Member of Technical Staff (AI Infrastructure Engineer)",
+          "url": "https://jobs.accel.com/companies/perplexity-2/jobs/73619669-ai-infra-engineer",
+          "date_observed": "2026-04-07",
+          "quote": "Hands-on experience with Slurm workload management, including job scheduling, resource allocation, and cluster optimization ... Advanced Slurm administration including multi-cluster federation and advanced scheduling policies"
+        },
+        {
+          "employer": "Cedana",
+          "title": "Senior Infrastructure Engineer - Systems, Kubernetes and SLURM Internals",
+          "url": "https://jobright.ai/jobs/info/691d6261bcdbf3560c9f06f1",
+          "date_observed": "2026-04-01",
+          "quote": "SLURM plugin development (sched, job_submit, prolog/epilog) ... Multi-cluster/federated SLURM setups ... SLURM-Kubernetes bridge tooling ... GPU Kubernetes tooling (Kueue, KubeFlow, KServe)"
+        }
+      ]
+    }
+  ],
+  "projects": []
+}
