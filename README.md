@@ -1,5 +1,9 @@
 # Senior AI Infrastructure Engineer - Learning Repository
 
+<!-- aicg:site-banner -->
+> 🎓 Part of the **[AI Infrastructure Curriculum](https://ai-infra-curriculum.github.io/)** — a free, open-source ladder of role-based AI-infrastructure programs. [Explore the ladder](https://ai-infra-curriculum.github.io/) · [Join the first live cohort](https://ai-infra-curriculum.github.io/junior.html)
+<!-- /aicg:site-banner -->
+
 ![AI Infrastructure](https://img.shields.io/badge/AI-Infrastructure-blue)
 ![Level](https://img.shields.io/badge/Level-Senior%20Engineer-orange)
 ![Estimated Time](https://img.shields.io/badge/Time-400--500%20hours-green)
@@ -839,7 +843,6 @@ A: The AI Infrastructure Architect curriculum (coming soon) or specialized roles
 ---
 
 **Ready to level up? Start with [Module 201: Advanced Kubernetes](lessons/mod-201-advanced-kubernetes/README.md)!**
-
 
 ---
 
